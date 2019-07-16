@@ -1,0 +1,21 @@
+$spriteSVG: url('../images/sprite.svg');
+$spritePNG: url('../images/sprite.png');
+
+%sprite {
+  display: inline-block;
+  background: $spritePNG;
+  background: $spriteSVG, linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+%sprite-png {
+  display: inline-block;
+  background: $spritePNG;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

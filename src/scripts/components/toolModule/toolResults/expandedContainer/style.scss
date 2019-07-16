@@ -1,0 +1,117 @@
+.expanded-container {
+  padding-bottom: rem-calc(40);
+
+  .chart {
+    padding: rem-calc(50 0);
+    // width: 50%;
+
+    .highcharts-container {
+      width: 100% !important;
+
+      svg {
+        width: 100% !important;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    margin: rem-calc(40) auto rem-calc(50);
+    width: 42%;
+  }
+
+  .net-acquisition-yield-calculator {
+    font-size: rem-calc(16);
+    padding: rem-calc(10 0 50);
+
+    .input-module {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+
+      select {
+        height: rem-calc(50);
+        margin-right: rem-calc(40);
+        padding: rem-calc(16 20);
+        width: rem-calc(200);
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+
+        h6 {
+          color: $dark-blue;
+          display: inline-block;
+          font-weight: 600 !important;
+          margin-right: rem-calc(5);
+        }
+
+        .date {
+          font-size: rem-calc(12);
+          margin-right: rem-calc(20);
+        }
+
+        .nav {
+          flex-grow: 1;
+          margin-right: rem-calc(40);
+        }
+
+        .nav,
+        .share-purchase-price,
+        .rect-btn {
+          align-self: center;
+        }
+
+        .share-purchase-price {
+          line-height: rem-calc(26);
+          width: rem-calc(300);
+        }
+
+        .rect-btn {
+          margin-left: rem-calc(15);
+          min-width: rem-calc(180);
+          width: rem-calc(180);
+        }
+      }
+    }
+
+    .output-module {
+      background-color: $white;
+      border: 1px solid $gray;
+      font-weight: 300;
+      padding: rem-calc(60 80);
+      position: relative;
+
+      .results {
+        border: 3px solid $gray;
+        border-left: none;
+        border-right: none;
+        margin-top: rem-calc(18);
+        padding-bottom: rem-calc(18);
+      }
+
+      .row {
+        display: flex;
+        padding-top: rem-calc(18);
+
+        span:last-child {
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+
+      .bottom-divider {
+        border-bottom: 1px solid $gray;
+        padding-bottom: rem-calc(18);
+      }
+
+      .reset-calculator {
+        position: absolute;
+        right: rem-calc(20);
+        top: rem-calc(20);
+      }
+    }
+  }
+}

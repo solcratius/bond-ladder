@@ -1,0 +1,179 @@
+@import 'util/util';
+
+$interstate: 'InvescoInterstate', Arial, sans-serif;
+$swift: 'Swift', Times, serif;
+
+$global-font-size: 16px; //100%;
+$global-width: rem-calc(1280);
+$global-lineheight: 1.3;
+
+$dark-blue: #001a7a;
+$blue: #1450d2;
+$navy: #0a1331;
+$blue-gray: #7f8cbc;
+$mint: #00c1b5;
+$light-gray: #f1f3f8;
+$gray: #e0e0e0;
+$medium-gray: #afafaf;
+$medium2-gray: #808080;
+$dark-gray: #4d4d4d;
+$black: #000;
+$white: #fff;
+$primary-color: $dark-blue;
+
+// $custom-palette: (
+//   gray1: $light-gray,
+//   gray2: #e0e0e0,
+//   gray3: #bfbfbf,
+//   gray4: $medium-gray,
+//   gray5: #999999,
+//   gray6: #6d6d6d,
+//   gray7: $dark-gray,
+//   gray8: #2d2d2d,
+//   gray9: #1f1f1f
+// );
+
+// @include add-custom-colors;
+
+$body-background: $white;
+$body-font-color: $black;
+
+$body-font-family: $interstate;
+$body-antialiased: true;
+
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 0;
+
+$global-text-direction: ltr;
+$global-flexbox: false;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+
+$breakpoints: (
+  small: 0,
+  xsmall: 480px,
+  xxsmall: 640px,
+  medium: 768px,
+  xmedium: 920px,
+  xxmedium: 1024px,
+  large: 1280px,
+  xlarge: 1366px,
+  xxlarge: 1920px
+);
+$print-breakpoint: large;
+$breakpoint-classes: (
+  small xsmall xxsmall medium xmedium xxmedium large xlarge xxlarge
+);
+
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 48px,
+  large: 64px
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 12; //8;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
+$header-font-style: normal;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$header-color: inherit;
+$header-lineheight: 1.4;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    'h1': (
+      'font-size': 40,
+      'line-height': 1.2
+    ),
+    'h2': (
+      'font-size': 32,
+      'line-height': 1.2
+    ),
+    'h3': (
+      'font-size': 28,
+      'line-height': 1.2
+    ),
+    'h4': (
+      'font-size': 22,
+      'line-height': 1.2
+    ),
+    'h5': (
+      'font-size': 18,
+      'line-height': 1.2
+    ),
+    'h6': (
+      'font-size': 16,
+      'line-height': 1.2
+    )
+  ),
+  medium: (
+    'h1': (
+      'font-size': 54,
+      'line-height': 1.3
+    ),
+    'h2': (
+      'font-size': 42,
+      'line-height': 1.3
+    ),
+    'h3': (
+      'font-size': 36,
+      'line-height': 1.3
+    ),
+    'h4': (
+      'font-size': 24,
+      'line-height': 1.3
+    ),
+    'h5': (
+      'font-size': 20,
+      'line-height': 1.3
+    ),
+    'h6': (
+      'font-size': 18,
+      'line-height': 1.3
+    )
+  ),
+  large: (
+    'h1': (
+      'font-size': 60,
+      'line-height': 1.4
+    ),
+    'h2': (
+      'font-size': 48,
+      'line-height': 1.4
+    ),
+    'h3': (
+      'font-size': 36,
+      'line-height': 1.4
+    ),
+    'h4': (
+      'font-size': 26,
+      'line-height': 1.4
+    ),
+    'h5': (
+      'font-size': 22,
+      'line-height': 1.4
+    ),
+    'h6': (
+      'font-size': 20,
+      'line-height': 1.4
+    )
+  )
+);
+$header-text-rendering: auto; //optimizeLegibility;
+$small-font-size: 80%;
+$header-small-font-color: $medium-gray;
+$paragraph-lineheight: 1.6;
+$paragraph-margin-bottom: 1rem;
+$paragraph-text-rendering: auto; //optimizeLegibility;

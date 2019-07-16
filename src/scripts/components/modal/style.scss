@@ -1,0 +1,43 @@
+#modal {
+  display: block;
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 300;
+
+  .modal {
+    background-color: rgba($navy, 0.75);
+    display: block;
+    height: 100%;
+    opacity: 0;
+    pointer-events: auto;
+    position: relative;
+    transition: opacity 0.35s ease-out;
+    width: 100%;
+
+    &.on {
+      opacity: 1;
+    }
+
+    .modal-box {
+      background-color: $white;
+      box-shadow: rem-calc(0 0 20) rgba($black, 0.25);
+      height: 40%;
+      left: 50%;
+      min-height: rem-calc(480);
+      min-width: rem-calc(320);
+      padding: rem-calc(60 40 30);
+      position: relative;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+    }
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+}

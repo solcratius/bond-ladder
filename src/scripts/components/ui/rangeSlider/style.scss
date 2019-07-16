@@ -1,0 +1,118 @@
+.slider {
+  padding: rem-calc(10 0 40 80);
+}
+
+#range-slider {
+  // margin: rem-calc(20 6 0);
+  margin: rem-calc(20 14 0);
+  position: relative;
+
+  .timeline {
+    @extend %no-style;
+    padding: rem-calc(0 0 20);
+    margin-top: rem-calc(-5);
+    z-index: 0;
+
+    li {
+      border-left: 1px solid $gray;
+      color: $medium-gray;
+      height: rem-calc(5);
+      margin: 0;
+      position: absolute;
+      width: rem-calc(1);
+
+      p {
+        font-size: rem-calc(12);
+        margin: 0;
+        margin-left: rem-calc(-15);
+        padding-top: rem-calc(16);
+      }
+
+      &.on {
+        border-left-color: $dark-blue;
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+.range-slider,
+.range-slider.rc-slider-disabled {
+  background-color: transparent;
+  z-index: 1;
+
+  .rc-slider-rail {
+    background-color: $gray;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: $gray;
+      height: rem-calc(4);
+      border-radius: 6px;
+      width: rem-calc(10);
+    }
+
+    &:before {
+      left: rem-calc(-6);
+    }
+
+    &:after {
+      right: rem-calc(-6);
+    }
+  }
+
+  .rc-slider-track {
+    background-color: $dark-blue;
+  }
+
+  .rc-slider-handle {
+    background-color: $dark-blue;
+    border: 2px solid $light-gray;
+    height: rem-calc(18);
+    margin-left: rem-calc(-9);
+    margin-top: rem-calc(-7);
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+    width: rem-calc(18);
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      border-color: $light-gray;
+    }
+
+    &:hover {
+      border-color: $light-gray;
+      transform: scale(1.35);
+      transition: transform 0.1s;
+    }
+
+    &:active {
+      transform: scale(1.65);
+      transition: transform 0.1s;
+    }
+  }
+
+  .rc-slider-handle-click-focused:focus {
+    box-shadow: none;
+  }
+}
+
+.slide-intro {
+  .range-slider,
+  .range-slider.rc-slider-disabled {
+    .rc-slider-track {
+      transition: width 1s ease-in-out 0s, left 1s ease-in-out 0s;
+    }
+
+    .rc-slider-handle {
+      transition: left 1s ease-in-out 0s;
+    }
+  }
+
+  .timeline li.on {
+    transition: border-left-color 0s ease-in-out 1s, color 0s ease-in-out 1s;
+  }
+}

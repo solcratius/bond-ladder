@@ -1,0 +1,65 @@
+.rect-btn,
+.rect-btn:hover,
+.rect-btn:visited {
+  background-color: $dark-blue;
+  color: $white;
+  display: inline-block;
+  padding: rem-calc(15 0);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  margin: rem-calc(20) auto;
+  min-width: rem-calc(260);
+  max-width: rem-calc(280);
+
+  transition: background-color 0.15s ease-in-out;
+
+  &:focus {
+    // box-shadow: rem-calc(0 0 8) $blue;
+    box-shadow: none;
+    outline: none !important;
+  }
+
+  &.inactive {
+    background-color: $gray;
+    display: none !important;
+    pointer-events: none;
+  }
+}
+
+.rect-btn:hover {
+  background: $blue;
+}
+
+.rect-btn:active {
+  background: $navy;
+  box-shadow: none !important;
+}
+
+.rect-btn {
+  &.icon-download {
+    display: block;
+    padding: rem-calc(15 0 15 24);
+    position: relative;
+
+    &:before {
+      font-size: rem-calc(26);
+      height: rem-calc(26);
+      left: rem-calc(28);
+      margin-top: rem-calc(-14);
+      position: absolute;
+      top: 50%;
+      width: rem-calc(26);
+    }
+  }
+
+  &.rounded-corners {
+    border-radius: rem-calc(4);
+  }
+
+  &.disabled {
+    background: $gray;
+    cursor: default;
+  }
+}

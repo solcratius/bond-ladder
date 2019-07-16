@@ -1,0 +1,27 @@
+.toggler {
+  padding: rem-calc(10 0 40);
+
+  .instruction-title {
+    margin-left: 0;
+  }
+
+  & > div {
+    position: relative;
+  }
+}
+
+.allocation-option {
+  padding: rem-calc(25 0 0);
+
+  p {
+    display: inline-block;
+  }
+}
+
+.as-of-date {
+  padding: rem-calc(25 0 0 80);
+
+  p {
+    text-align: right;
+  }
+}

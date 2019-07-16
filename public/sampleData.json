@@ -1,0 +1,2163 @@
+{
+  "tickers": {
+    "municipalFixedIncome": [
+      {
+        "ticker": "BMCL",
+        "maturityDate": 1640930400000,
+        "yieldToMaturity": "2.491",
+        "yieldToWorse": "2.459",
+        "secYield": 2.3828,
+        "distYield": 2.705,
+        "effectiveDuration": "1.778",
+        "numOfHoldings": 402,
+        "fundName": "Invesco BulletShares 2021 Corporate Bond ETF",
+        "productId": "6492968A729F06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.13185348",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 41.149323
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.678675
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 8.751265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.049561
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 7.937307
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 6.80011
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 6.711688
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 3.896526
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.277536
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.04225
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.686563
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.019184
+          }
+        ],
+        "creditQuality": {
+          "aaa": "14%",
+          "aa": "2%",
+          "a": "11%",
+          "bbb": "43%",
+          "bb": "21%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "9%"
+        }
+      },
+      {
+        "ticker": "BMCJ",
+        "maturityDate": 1577772000000,
+        "yieldToMaturity": "2.45",
+        "yieldToWorse": "2.428",
+        "secYield": 2.3844,
+        "distYield": 2.3227,
+        "effectiveDuration": "0.217",
+        "numOfHoldings": 134,
+        "fundName": "Invesco BulletShares 2019 Corporate Bond ETF",
+        "productId": "6492968A729D06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.1109768",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 44.742344
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.702664
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.347263
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 8.092265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 8.012967
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 7.363599
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 7.342814
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.702474
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "U.S. Government Securities",
+            "value": 2.030285
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 1.894265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.523954
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.245102
+          }
+        ],
+        "creditQuality": {
+          "aaa": "14%",
+          "aa": "2%",
+          "a": "11%",
+          "bbb": "43%",
+          "bb": "21%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "9%"
+        }
+      },
+      {
+        "ticker": "BMCK",
+        "maturityDate": 1609394400000,
+        "yieldToMaturity": "2.46",
+        "yieldToWorse": "2.411",
+        "secYield": 2.3574,
+        "distYield": 2.5005,
+        "effectiveDuration": "0.907",
+        "numOfHoldings": 374,
+        "fundName": "Invesco BulletShares 2020 Corporate Bond ETF",
+        "productId": "6492968A729E06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.25437278",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 39.636361
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 10.144515
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.988142
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 8.534125
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.079239
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 7.54424
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 7.283523
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.724193
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 2.422451
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 1.722545
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.135885
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.784771
+          }
+        ],
+        "creditQuality": {
+          "aaa": "14%",
+          "aa": "2%",
+          "a": "11%",
+          "bbb": "43%",
+          "bb": "21%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "9%"
+        }
+      },
+      {
+        "ticker": "BMCM",
+        "maturityDate": 1672466400000,
+        "yieldToMaturity": "2.505",
+        "yieldToWorse": "2.485",
+        "secYield": 2.4572,
+        "distYield": 2.8524,
+        "effectiveDuration": "2.687",
+        "numOfHoldings": 385,
+        "fundName": "Invesco BulletShares 2022 Corporate Bond ETF",
+        "productId": "6492968A72A006ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.3017229",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 31.442596
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 12.32126
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 10.941613
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 9.588697
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 8.920955
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 7.512673
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.013197
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 4.001125
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.827635
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.395324
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 2.319587
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.715338
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "21%",
+          "a": "33%",
+          "bbb": "42%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      }
+    ],
+    "investmentGrade": [
+      {
+        "ticker": "BSCL",
+        "maturityDate": 1640930400000,
+        "yieldToMaturity": "2.491",
+        "yieldToWorse": "2.459",
+        "secYield": 2.3828,
+        "distYield": 2.705,
+        "effectiveDuration": "1.778",
+        "numOfHoldings": 402,
+        "fundName": "Invesco BulletShares 2021 Corporate Bond ETF",
+        "productId": "6492968A729F06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.13185348",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 41.149323
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.678675
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 8.751265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.049561
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 7.937307
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 6.80011
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 6.711688
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 3.896526
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.277536
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.04225
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.686563
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.019184
+          }
+        ],
+        "creditQuality": {
+          "aaa": "1%",
+          "aa": "14%",
+          "a": "43%",
+          "bbb": "42%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      },
+      {
+        "ticker": "BSCJ",
+        "maturityDate": 1577772000000,
+        "yieldToMaturity": "2.45",
+        "yieldToWorse": "2.428",
+        "secYield": 2.3844,
+        "distYield": 2.3227,
+        "effectiveDuration": "0.217",
+        "numOfHoldings": 134,
+        "fundName": "Invesco BulletShares 2019 Corporate Bond ETF",
+        "productId": "6492968A729D06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.1109768",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 44.742344
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.702664
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.347263
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 8.092265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 8.012967
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 7.363599
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 7.342814
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.702474
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "U.S. Government Securities",
+            "value": 2.030285
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 1.894265
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.523954
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.245102
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "21%",
+          "a": "33%",
+          "bbb": "42%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSCK",
+        "maturityDate": 1609394400000,
+        "yieldToMaturity": "2.46",
+        "yieldToWorse": "2.411",
+        "secYield": 2.3574,
+        "distYield": 2.5005,
+        "effectiveDuration": "0.907",
+        "numOfHoldings": 374,
+        "fundName": "Invesco BulletShares 2020 Corporate Bond ETF",
+        "productId": "6492968A729E06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.25437278",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 39.636361
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 10.144515
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.988142
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 8.534125
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.079239
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 7.54424
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 7.283523
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.724193
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 2.422451
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 1.722545
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.135885
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.784771
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "14%",
+          "a": "42%",
+          "bbb": "41%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSCM",
+        "maturityDate": 1672466400000,
+        "yieldToMaturity": "2.505",
+        "yieldToWorse": "2.485",
+        "secYield": 2.4572,
+        "distYield": 2.8524,
+        "effectiveDuration": "2.687",
+        "numOfHoldings": 385,
+        "fundName": "Invesco BulletShares 2022 Corporate Bond ETF",
+        "productId": "6492968A72A006ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.3017229",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 31.442596
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 12.32126
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 10.941613
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 9.588697
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 8.920955
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 7.512673
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.013197
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 4.001125
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.827635
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.395324
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 2.319587
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.715338
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "10%",
+          "a": "38%",
+          "bbb": "47%",
+          "bb": "3%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      },
+      {
+        "ticker": "BSCN",
+        "maturityDate": 1704002400000,
+        "yieldToMaturity": "2.601",
+        "yieldToWorse": "2.579",
+        "secYield": 2.5251,
+        "distYield": 3.008,
+        "effectiveDuration": "3.499",
+        "numOfHoldings": 319,
+        "fundName": "Invesco BulletShares 2023 Corporate Bond ETF",
+        "productId": "6492968A72A106ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.06142897",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 30.184543
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 11.986532
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 10.05476
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 9.015391
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.515255
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.208261
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 7.424843
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 4.708537
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 4.590097
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 3.19835
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.258678
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.854755
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "13%",
+          "a": "34%",
+          "bbb": "49%",
+          "bb": "2%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      },
+      {
+        "ticker": "BSCO",
+        "maturityDate": 1735624800000,
+        "yieldToMaturity": "2.758",
+        "yieldToWorse": "2.731",
+        "secYield": 2.6918,
+        "distYield": 3.1419,
+        "effectiveDuration": "4.355",
+        "numOfHoldings": 241,
+        "fundName": "Invesco BulletShares 2024 Corporate Bond ETF",
+        "productId": "6492968A72A206ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.14031753",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 31.524049
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 12.720193
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 11.934906
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 10.17998
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 7.750364
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.577846
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 6.310591
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 5.774866
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.669801
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.920196
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 1.579777
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.057434
+          }
+        ],
+        "creditQuality": {
+          "aaa": "1%",
+          "aa": "11%",
+          "a": "33%",
+          "bbb": "52%",
+          "bb": "3%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSCP",
+        "maturityDate": 1767160800000,
+        "yieldToMaturity": "2.877",
+        "yieldToWorse": "2.846",
+        "secYield": 2.8328,
+        "distYield": 3.2773,
+        "effectiveDuration": "5.135",
+        "numOfHoldings": 238,
+        "fundName": "Invesco BulletShares 2025 Corporate Bond ETF",
+        "productId": "6492968A72A306ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.04659596",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 26.969388
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 18.106383
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 12.058836
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 10.357341
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 6.130556
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.081844
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 6.073503
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 6.049513
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 3.701694
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 1.87084
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.687361
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.912738
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "10%",
+          "a": "29%",
+          "bbb": "57%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSCQ",
+        "maturityDate": 1798696800000,
+        "yieldToMaturity": "3.007",
+        "yieldToWorse": "2.994",
+        "secYield": 2.9916,
+        "distYield": 3.2993,
+        "effectiveDuration": "6.004",
+        "numOfHoldings": 249,
+        "fundName": "Invesco BulletShares 2026 Corporate Bond ETF",
+        "productId": "6492968A72A406ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "20.10504664",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 35.887736
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 9.807657
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 9.001949
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 8.932935
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 7.969794
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.895756
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 5.653604
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 5.199797
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 4.725605
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 4.202045
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 0.991486
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.731639
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "10%",
+          "a": "33%",
+          "bbb": "53%",
+          "bb": "2%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      },
+      {
+        "ticker": "BSCR",
+        "maturityDate": 1830232800000,
+        "yieldToMaturity": "3.106",
+        "yieldToWorse": "3.087",
+        "secYield": 3.0806,
+        "distYield": 3.5114,
+        "effectiveDuration": "6.676",
+        "numOfHoldings": 215,
+        "fundName": "Invesco BulletShares 2027 Corporate Bond ETF",
+        "productId": "6492968A72A506ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "20.45503193",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 26.99249
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 14.626716
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 10.793472
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 9.640544
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.026153
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 6.827053
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 6.445436
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 5.76679
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 4.601452
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 3.677982
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 2.601916
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "10%",
+          "a": "30%",
+          "bbb": "57%",
+          "bb": "1%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      },
+      {
+        "ticker": "BSCS",
+        "maturityDate": 1861855200000,
+        "yieldToMaturity": "3.182",
+        "yieldToWorse": "3.167",
+        "secYield": 3.1545,
+        "distYield": 3.6469,
+        "effectiveDuration": "7.224",
+        "numOfHoldings": 147,
+        "fundName": "Invesco BulletShares 2028 Corporate Bond ETF",
+        "productId": "7232F2765B844F07E0531A6FD60AE8A8",
+        "asOfDate": 1562302800000,
+        "nav": "21.48521381",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 22.555322
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 13.873354
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 13.299547
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 13.162474
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 9.740501
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 7.636115
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 6.577035
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 4.333399
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 4.04327
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 3.766375
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.012605
+          }
+        ],
+        "creditQuality": {
+          "aaa": "1%",
+          "aa": "6%",
+          "a": "32%",
+          "bbb": "59%",
+          "bb": "2%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
+        }
+      }
+    ],
+    "highYield": [
+      {
+        "ticker": "BSJK",
+        "maturityDate": 1609394400000,
+        "yieldToMaturity": "4.6",
+        "yieldToWorse": "3.283",
+        "secYield": 3.6691,
+        "distYield": 4.16,
+        "effectiveDuration": "0.687",
+        "numOfHoldings": 78,
+        "fundName": "Invesco BulletShares 2020 High Yield Corporate Bond ETF",
+        "productId": "6492968A72A806ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "24.02403994",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 23.033858
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 15.202373
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 12.017578
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 11.638753
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 9.172348
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 7.963897
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 7.499279
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 5.343619
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 5.316008
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.522299
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 0.154724
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.135267
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "2%",
+          "bb": "47%",
+          "b": "44%",
+          "ccc": "4%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "2%"
+        }
+      },
+      {
+        "ticker": "BSJL",
+        "maturityDate": 1640930400000,
+        "yieldToMaturity": "5.406",
+        "yieldToWorse": "4.526",
+        "secYield": 4.6699,
+        "distYield": 5.1614,
+        "effectiveDuration": "1.488",
+        "numOfHoldings": 130,
+        "fundName": "Invesco BulletShares 2021 High Yield Corporate Bond ETF",
+        "productId": "6492968A72A906ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "24.6683364",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 16.020743
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 14.283759
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 14.117504
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 10.03433
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 8.240066
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 8.12522
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 5.902276
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 5.674475
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 5.532616
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 5.127502
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 4.642571
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.29893
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "0%",
+          "bb": "50%",
+          "b": "42%",
+          "ccc": "7%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSJM",
+        "maturityDate": 1672466400000,
+        "yieldToMaturity": "5.659",
+        "yieldToWorse": "4.778",
+        "secYield": 4.7254,
+        "distYield": 5.3346,
+        "effectiveDuration": "1.725",
+        "numOfHoldings": 176,
+        "fundName": "Invesco BulletShares 2022 High Yield Corporate Bond ETF",
+        "productId": "6492968A72AA06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "24.49022099",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 14.086305
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 13.66761
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 12.89247
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 12.717882
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 11.28915
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 10.608462
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 8.566799
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 6.451689
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 3.851735
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 2.719796
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 2.343557
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 0.804542
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "0%",
+          "bb": "51%",
+          "b": "38%",
+          "ccc": "10%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSJN",
+        "maturityDate": 1704002400000,
+        "yieldToMaturity": "6.046",
+        "yieldToWorse": "5.128",
+        "secYield": 5.1112,
+        "distYield": 5.5598,
+        "effectiveDuration": "2.15",
+        "numOfHoldings": 209,
+        "fundName": "Invesco BulletShares 2023 High Yield Corporate Bond ETF",
+        "productId": "6492968A72AB06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "26.05911613",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 13.252692
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 12.287024
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 12.259441
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 11.85435
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 11.070828
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 10.817852
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 7.608659
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 6.353142
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 5.223713
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 3.946935
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 3.74083
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 1.58454
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "1%",
+          "bb": "44%",
+          "b": "44%",
+          "ccc": "9%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSJO",
+        "maturityDate": 1735624800000,
+        "yieldToMaturity": "5.722",
+        "yieldToWorse": "4.921",
+        "secYield": 4.7152,
+        "distYield": 5.1092,
+        "effectiveDuration": "2.44",
+        "numOfHoldings": 194,
+        "fundName": "Invesco BulletShares 2024 High Yield Corporate Bond ETF",
+        "productId": "6492968A72AC06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "25.23446703",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 14.456823
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 14.427549
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 10.509322
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 9.940487
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.391268
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 9.22013
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 7.559347
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 6.771854
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 5.543699
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 4.467877
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 4.378302
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 3.333343
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "1%",
+          "bb": "55%",
+          "b": "35%",
+          "ccc": "7%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSJP",
+        "maturityDate": 1767160800000,
+        "yieldToMaturity": "5.884",
+        "yieldToWorse": "5.578",
+        "secYield": 5.318,
+        "distYield": 5.681,
+        "effectiveDuration": "3.334",
+        "numOfHoldings": 244,
+        "fundName": "Invesco BulletShares 2025 High Yield Corporate Bond ETF",
+        "productId": "6492968A72AD06ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "24.45125738",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 15.085647
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 14.150464
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 13.334023
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 11.446667
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 10.792207
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 8.423566
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 7.422613
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 4.840959
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 4.393267
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 3.85703
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 3.477832
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.775729
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "0%",
+          "bb": "48%",
+          "b": "41%",
+          "ccc": "10%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      },
+      {
+        "ticker": "BSJQ",
+        "maturityDate": 1798696800000,
+        "yieldToMaturity": "5.901",
+        "yieldToWorse": "5.699",
+        "secYield": 5.3133,
+        "distYield": 5.7371,
+        "effectiveDuration": "3.911",
+        "numOfHoldings": 152,
+        "fundName": "Invesco BulletShares 2026 High Yield Corporate Bond ETF",
+        "productId": "7232F2765B834F07E0531A6FD60AE8A8",
+        "asOfDate": 1562302800000,
+        "nav": "25.65383651",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 22.070445
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 16.612915
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 15.737463
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 9.07846
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 8.494819
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 7.209261
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 5.735883
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 5.419993
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 4.571157
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 2.82107
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 1.212772
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 1.035762
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "0%",
+          "a": "0%",
+          "bbb": "0%",
+          "bb": "56%",
+          "b": "37%",
+          "ccc": "6%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "1%"
+        }
+      }
+    ],
+    "emerging": [
+      {
+        "ticker": "BSAE",
+        "maturityDate": 1640930400000,
+        "yieldToMaturity": "3.158",
+        "yieldToWorse": "3.157",
+        "secYield": 3.0056,
+        "distYield": null,
+        "effectiveDuration": "1.801",
+        "numOfHoldings": 50,
+        "fundName": "Invesco BulletShares 2021 USD Emerging Markets Debt ETF",
+        "productId": "763DF9A49619777BE0531A6FD60A6843",
+        "asOfDate": 1562302800000,
+        "nav": "25.47507011",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Sovereign Debt",
+            "value": 34.67178
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 31.456737
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 17.564746
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 10.348998
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 2.941092
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 2.008955
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 1.00769
+          }
+        ],
+        "creditQuality": {
+          "aaa": "4%",
+          "aa": "4%",
+          "a": "19%",
+          "bbb": "29%",
+          "bb": "13%",
+          "b": "0%",
+          "ccc": "4%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "27%"
+        }
+      },
+      {
+        "ticker": "BSBE",
+        "maturityDate": 1672466400000,
+        "yieldToMaturity": "3.359",
+        "yieldToWorse": "3.307",
+        "secYield": 3.2175,
+        "distYield": null,
+        "effectiveDuration": "2.583",
+        "numOfHoldings": 54,
+        "fundName": "Invesco BulletShares 2022 USD Emerging Markets Debt ETF",
+        "productId": "763DF9A4961A777BE0531A6FD60A6843",
+        "asOfDate": 1562302800000,
+        "nav": "25.83838272",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 36.58282
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Sovereign Debt",
+            "value": 24.229797
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 17.834773
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 6.13004
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 6.036716
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 4.112607
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 2.049041
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 1.995659
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 1.028547
+          }
+        ],
+        "creditQuality": {
+          "aaa": "5%",
+          "aa": "6%",
+          "a": "17%",
+          "bbb": "27%",
+          "bb": "8%",
+          "b": "2%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "35%"
+        }
+      },
+      {
+        "ticker": "BSCE",
+        "maturityDate": 1704002400000,
+        "yieldToMaturity": "3.59",
+        "yieldToWorse": "3.519",
+        "secYield": 3.3853,
+        "distYield": null,
+        "effectiveDuration": "3.364",
+        "numOfHoldings": 48,
+        "fundName": "Invesco BulletShares 2023 USD Emerging Markets Debt ETF",
+        "productId": "763DF9A4961B777BE0531A6FD60A6843",
+        "asOfDate": 1562302800000,
+        "nav": "26.05673871",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Sovereign Debt",
+            "value": 27.106911
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 26.031085
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 20.916613
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 7.087336
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 7.003402
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 4.902971
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 3.903799
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 2.025588
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 1.022295
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "2%",
+          "a": "16%",
+          "bbb": "41%",
+          "bb": "14%",
+          "b": "4%",
+          "ccc": "3%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "20%"
+        }
+      },
+      {
+        "ticker": "BSDE",
+        "maturityDate": 1735624800000,
+        "yieldToMaturity": "3.941",
+        "yieldToWorse": "3.789",
+        "secYield": 3.9236,
+        "distYield": null,
+        "effectiveDuration": "3.961",
+        "numOfHoldings": 48,
+        "fundName": "Invesco BulletShares 2024 USD Emerging Markets Debt ETF",
+        "productId": "763DF9A4961C777BE0531A6FD60A6843",
+        "asOfDate": 1562302800000,
+        "nav": "26.25415479",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Sovereign Debt",
+            "value": 25.738455
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 15.607776
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 15.314369
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 12.415295
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 7.138996
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 5.94435
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 5.912152
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 5.762961
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 4.166904
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 1.998741
+          }
+        ],
+        "creditQuality": {
+          "aaa": "0%",
+          "aa": "2%",
+          "a": "11%",
+          "bbb": "43%",
+          "bb": "21%",
+          "b": "11%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "12%"
+        }
+      }
+    ]
+  },
+  "asOfDate": 1562821200000
+}

@@ -1,0 +1,101 @@
+.main-container {
+  border-bottom: none;
+  margin-bottom: 0;
+  min-height: calc(100vh - 163px);
+  position: relative;
+}
+
+.tool .main-container {
+  border-bottom: 1px solid $gray;
+  margin-bottom: rem-calc(100);
+  min-height: calc(100vh - 70px);
+}
+
+.intro-module,
+.tool-module {
+  display: none;
+  position: relative;
+  top: 0;
+}
+
+.instruction-title {
+  color: $black;
+  display: block;
+  margin: rem-calc(0 0 14 7);
+
+  .value {
+    color: $dark-blue;
+    float: right;
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.main-bg {
+  display: block;
+  height: 100vh;
+  position: relative;
+
+  &:before {
+    background-color: $dark-blue;
+    content: '';
+    height: 100%;
+    position: absolute;
+    transition: width 0.75s cubic-bezier(0.75, 0, 0.25, 1) 0s,
+      height 1s cubic-bezier(0.25, 0.75, 0.25, 1) 0.75s;
+    width: 50%;
+  }
+
+  &.transition {
+    &:before {
+      height: rem-calc(70);
+      width: 100%;
+    }
+
+    .intro-module {
+      opacity: 0;
+    }
+
+    // .tool-module {
+    //   display: block;
+    // }
+  }
+
+  .bottom-contents {
+    display: none;
+  }
+
+  &.tool {
+    height: auto;
+
+    .intro-module {
+      display: none;
+    }
+
+    .tool-module {
+      display: block;
+
+      &.show {
+        .sub-head {
+          opacity: 1;
+          transition: opacity 0.5s ease-out 0s;
+        }
+
+        .component {
+          opacity: 1;
+          transition: opacity 0.5s ease-out 0.75s;
+        }
+      }
+    }
+
+    .bottom-contents {
+      display: block;
+    }
+
+    footer {
+      margin-top: rem-calc(20);
+    }
+  }
+}

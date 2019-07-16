@@ -1,0 +1,75 @@
+.sub-head {
+  background-color: $dark-blue;
+  opacity: 0;
+  padding: rem-calc(48 0 34);
+
+  .eyebrow {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: rem-calc(22);
+    margin-bottom: rem-calc(4);
+  }
+}
+
+.download-report {
+  display: table;
+  padding: rem-calc(0 0 0 80);
+
+  a {
+    display: table-cell;
+    float: right;
+    vertical-align: middle;
+  }
+}
+
+.ladder-name,
+.investment-input {
+  padding: rem-calc(0 40 0 0);
+  position: relative;
+
+  input[type='text'],
+  input[type='number'] {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-size: rem-calc(24);
+    font-weight: 300;
+    height: auto;
+    line-height: 1.1;
+    margin-left: rem-calc(-14);
+    max-width: none;
+    padding: rem-calc(6 14 5);
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($blue, 0.25);
+    }
+
+    @include breakpoint(medium up) {
+      font-size: rem-calc(36);
+      line-height: 1.4;
+    }
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .inputHelper {
+    display: inline-block;
+    font-size: rem-calc(24);
+    font-weight: 300;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+
+    @include breakpoint(medium up) {
+      font-size: rem-calc(36);
+    }
+  }
+}

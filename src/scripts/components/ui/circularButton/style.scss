@@ -1,0 +1,49 @@
+a.circle-btn,
+a.circle-btn:visited {
+  color: $white;
+  display: inline-block;
+  font-size: rem-calc(12);
+  padding: rem-calc(64 0 5);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  span {
+    // background-color: transparent;
+    // border: 2px solid $white;
+    background-color: $mint;
+    border: 2px solid $mint;
+    border-radius: 50%;
+    height: rem-calc(46);
+    left: 50%;
+    margin-left: rem-calc(-23);
+    position: absolute;
+    top: rem-calc(5);
+    transition: background-color 0.25s ease-in-out,
+      border-color 0.25s ease-in-out;
+    width: rem-calc(46);
+
+    &:before {
+      display: inline-block;
+      font-size: rem-calc(28);
+      height: rem-calc(26);
+      left: 50%;
+      margin-left: rem-calc(-14);
+      margin-top: rem-calc(-13);
+      position: inherit;
+      top: 50%;
+      width: rem-calc(26);
+    }
+  }
+}
+
+a.circle-btn:hover span {
+  background-color: lighten($mint, 5%);
+  border-color: lighten($mint, 5%);
+}
+
+a.circle-btn:active span {
+  background-color: darken($mint, 35%);
+  border-color: darken($mint, 35%);
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}

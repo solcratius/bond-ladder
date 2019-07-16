@@ -1,0 +1,106 @@
+.table-result {
+  background-color: $light-gray;
+  border-top: 1px solid $gray;
+  margin-top: -1px;
+  font-size: rem-calc(18);
+  font-weight: 400;
+  z-index: 50;
+
+  .grid-container {
+    padding-bottom: rem-calc(22);
+    padding-top: rem-calc(22);
+  }
+
+  .total {
+    position: relative;
+  }
+
+  .grid-x {
+    .cell:nth-child(2) {
+      color: $dark-blue;
+      font-weight: 600;
+      padding: rem-calc(12 8 11 2);
+      text-align: left;
+      width: 11%;
+    }
+
+    .cell:nth-child(3) {
+      padding: rem-calc(12 8 11);
+      width: 12%;
+    }
+
+    .cell:first-child {
+      padding: 0;
+      width: 0;
+    }
+  }
+
+  .chevron-btn {
+    display: none;
+    right: rem-calc(30);
+    top: rem-calc(30);
+  }
+
+  .warning {
+    color: red;
+    animation: warning-animation 1s 1;
+  }
+
+  @keyframes warning-animation {
+    0% {
+      color: $black;
+    }
+    20% {
+      color: red;
+    }
+    40% {
+      color: red;
+    }
+    60% {
+      color: $black;
+    }
+    80% {
+      color: $black;
+    }
+    100% {
+      color: red;
+    }
+  }
+
+  &.fixed {
+    border-top: 1px solid $gray;
+    bottom: 0;
+    box-shadow: rem-calc(0 0 8) rgba($black, 0.18);
+    left: 0;
+    min-height: calc(100vh - 245px);
+    position: fixed;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+
+    &.no-anim {
+      transition: none;
+    }
+
+    .grid-container {
+      padding-bottom: rem-calc(16);
+      padding-top: rem-calc(16);
+
+      @include breakpoint(medium up) {
+        padding-bottom: rem-calc(22);
+        padding-top: rem-calc(22);
+      }
+    }
+
+    .chevron-btn {
+      display: inline-block;
+    }
+  }
+
+  &.expand {
+    transform: translateY(0);
+
+    // .chevron-btn {
+    //   display: inline-block;
+    // }
+  }
+}

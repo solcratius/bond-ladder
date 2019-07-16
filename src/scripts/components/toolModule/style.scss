@@ -1,0 +1,16 @@
+.module {
+  padding: rem-calc(15 0);
+
+  @include breakpoint(large up) {
+    padding: rem-calc(20 0);
+  }
+}
+
+.component {
+  opacity: 0;
+  padding-top: rem-calc(10);
+
+  @include breakpoint(medium up) {
+    padding-top: rem-calc(15);
+  }
+}

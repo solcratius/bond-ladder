@@ -1,0 +1,50 @@
+.close-btn {
+  cursor: pointer;
+  display: inline-block;
+  height: rem-calc(30);
+  min-width: rem-calc(30);
+  outline: none;
+  position: absolute;
+  right: rem-calc(10);
+  top: rem-calc(10);
+  transition: opacity 0.25s ease-in-out;
+
+  &:before,
+  &:after {
+    border-top: 2px solid $dark-blue;
+    content: '';
+    height: 1px;
+    left: 50%;
+    margin-left: rem-calc(-10);
+    position: inherit;
+    top: rem-calc(14);
+    transform: rotate(45deg);
+    width: rem-calc(20);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  &.padded {
+    color: $dark-blue;
+    font-size: rem-calc(14);
+    line-height: rem-calc(27);
+    padding: rem-calc(3 30 0 7);
+    text-align: right;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:before,
+    &:after {
+      left: auto;
+      right: rem-calc(7);
+      width: rem-calc(18);
+    }
+  }
+}

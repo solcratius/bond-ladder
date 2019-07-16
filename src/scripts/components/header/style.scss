@@ -1,0 +1,129 @@
+header {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+
+  .nav-strip {
+    align-items: center;
+    display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: rem-calc(42);
+    min-width: rem-calc(310);
+    padding: rem-calc(60 0);
+    width: 100%;
+  }
+
+  .logo,
+  h1,
+  nav {
+    display: flex;
+  }
+
+  .logo {
+    align-items: center;
+    height: rem-calc(42);
+    padding-right: rem-calc(20);
+    position: relative;
+
+    .icon-invesco-logo {
+      color: $white;
+      font-size: rem-calc(40);
+      height: rem-calc(40);
+      padding-right: rem-calc(30);
+      width: rem-calc(78);
+
+      &:before {
+        left: 0;
+        position: absolute;
+        top: 1px;
+        width: rem-calc(48);
+      }
+    }
+  }
+
+  h1 {
+    color: $white;
+    font-family: $interstate;
+    font-weight: 400;
+    font-size: rem-calc(16);
+    margin-bottom: 0;
+    opacity: 0;
+  }
+
+  nav {
+    margin-right: rem-calc(-13);
+
+    ul {
+      @extend %no-style;
+      @include clearfix;
+    }
+
+    li {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    .util-btn {
+      color: $dark-blue;
+      cursor: pointer;
+      display: block;
+      font-size: rem-calc(26);
+      height: rem-calc(42);
+      padding: rem-calc(0 6);
+      position: relative;
+      transition: color 0.25s ease-in-out;
+      width: rem-calc(38);
+
+      &:before {
+        line-height: rem-calc(42);
+      }
+
+      &:active {
+        color: rgba($dark-blue, 0.5);
+        transition: color 0.1s ease-in-out;
+      }
+    }
+  }
+
+  a {
+    &:hover,
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.transition header {
+  .nav-strip {
+    padding: rem-calc(14 0);
+    transition: padding 0.75s ease-in-out 0.65s;
+  }
+
+  h1 {
+    opacity: 1;
+    transition: opacity 0.25s linear 1.1s;
+  }
+
+  .util-btn {
+    color: $white;
+    transition: color 0s linear 0.45s;
+  }
+}
+
+.tool.transition header {
+  background-color: $dark-blue;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+
+  .util-btn {
+    transition: color 0.25s ease-in-out;
+
+    &:active {
+      color: $blue;
+      transition: color 0.1s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.reset-btn,
+.reset-btn:hover,
+.reset-btn:visited {
+  color: $dark-blue;
+  display: inline-block;
+  font-size: rem-calc(12);
+  height: rem-calc(26);
+  line-height: rem-calc(26);
+  padding-right: rem-calc(27);
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:before {
+    // background-color: red;
+    font-size: rem-calc(26);
+    height: rem-calc(26);
+    position: absolute;
+    right: 0;
+    transform: rotate(0deg);
+    transition: none;
+    // width: rem-calc(25);
+    width: rem-calc(26);
+  }
+
+  &:hover:before {
+    right: 1px;
+    transform: rotate(360deg);
+    transition: transform 0.5s linear;
+    // animation: rotating 0.25s linear 2;
+  }
+
+  &:active {
+    color: $blue;
+    transition: color 0.1s ease-in-out;
+
+    &:before {
+      opacity: 0.75;
+      transition: opacity 0.1s ease-in-out;
+    }
+  }
+}
+
+// @keyframes rotating {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(180deg);
+//   }
+// }
+
+.reset-btn {
+  float: right;
+  // margin-bottom: rem-calc(25);
+}

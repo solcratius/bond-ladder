@@ -1,0 +1,77 @@
+@import 'resources/assets';
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: $medium-gray;
+}
+
+h1,
+h2,
+h3 {
+  sup {
+    font-size: 50%;
+    top: -0.75em;
+  }
+}
+
+h4,
+h5 {
+  margin-bottom: rem-calc(20);
+  padding-top: rem-calc(25);
+}
+
+h5,
+h6 {
+  font-weight: 300 !important;
+}
+
+h6 {
+  font-size: rem-calc(16);
+  margin-bottom: rem-calc(10);
+  padding-top: rem-calc(10);
+}
+
+li,
+p {
+  font-size: rem-calc(14);
+  font-weight: 300;
+  margin-bottom: rem-calc(20);
+}
+
+.small-text {
+  font-size: rem-calc(12);
+}
+
+.smaller-txt {
+  font-size: 50%;
+  opacity: 0.5;
+}
+
+.eyebrow {
+  color: $dark-blue;
+  display: block;
+  font-size: rem-calc(14);
+}
+
+.grid-table {
+  display: table;
+
+  & > .cell {
+    display: table-cell;
+  }
+}
