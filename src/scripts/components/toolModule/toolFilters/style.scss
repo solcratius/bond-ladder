@@ -1,5 +1,6 @@
 .toggler {
-  padding: rem-calc(10 0 40);
+  padding: rem-calc(10 0 35);
+  padding: 0;
 
   .instruction-title {
     margin-left: 0;
@@ -8,6 +9,10 @@
   & > div {
     position: relative;
   }
+}
+
+.slider {
+  padding: rem-calc(10 0 35 80);
 }
 
 .allocation-option {

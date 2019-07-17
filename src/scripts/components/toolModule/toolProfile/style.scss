@@ -1,12 +1,17 @@
 .sub-head {
   background-color: $dark-blue;
-  opacity: 0;
-  padding: rem-calc(48 0 34);
+  // opacity: 0;
+  // padding: rem-calc(48 0 34);
+  // padding: rem-calc(32 0 18);
+  padding: rem-calc(20 0 16);
+  transform: translateY(-101%);
+  transition: transform 0.5s cubic-bezier(0.75, 0, 0.25, 1);
 
   .eyebrow {
     color: rgba(255, 255, 255, 0.5);
-    font-size: rem-calc(22);
+    // font-size: rem-calc(16);
     margin-bottom: rem-calc(4);
+    text-transform: uppercase;
   }
 }
 
@@ -23,13 +28,14 @@
 
 .ladder-name,
 .investment-input {
-  padding: rem-calc(0 40 0 0);
+  padding: rem-calc(8 40 0 0);
   position: relative;
 
   input[type='text'],
   input[type='number'] {
     background-color: transparent;
     border: none;
+    border-radius: rem-calc(4);
     color: $white;
     font-size: rem-calc(24);
     font-weight: 300;
@@ -37,7 +43,7 @@
     line-height: 1.1;
     margin-left: rem-calc(-14);
     max-width: none;
-    padding: rem-calc(6 14 5);
+    padding: rem-calc(3 14 2);
     transition: background-color 0.25s ease-in-out;
 
     &:hover,
@@ -58,6 +64,13 @@
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+
+  .is-focus {
+    input[type='text'],
+    input[type='number'] {
+      padding: rem-calc(3 14 2);
+    }
   }
 
   .inputHelper {

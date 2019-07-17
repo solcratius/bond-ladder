@@ -1,7 +1,10 @@
 .main-container {
+  // background-color: $light-gray;
+  // background-color: #fbfbfb;
   border-bottom: none;
   margin-bottom: 0;
-  min-height: calc(100vh - 163px);
+  // min-height: calc(100vh - 163px);
+  min-height: calc(100vh - 70px);
   position: relative;
 }
 
@@ -35,32 +38,31 @@
 
 .main-bg {
   display: block;
-  height: 100vh;
+  // height: 100vh;
+  height: auto;
   position: relative;
 
-  &:before {
-    background-color: $dark-blue;
-    content: '';
-    height: 100%;
-    position: absolute;
-    transition: width 0.75s cubic-bezier(0.75, 0, 0.25, 1) 0s,
-      height 1s cubic-bezier(0.25, 0.75, 0.25, 1) 0.75s;
-    width: 50%;
-  }
+  // &:before {
+  //   // background-color: $dark-blue;
+  //   background-color: $light-gray;
+  //   content: '';
+  //   height: 100%;
+  //   position: absolute;
+  //   transition: width 0.75s cubic-bezier(0.75, 0, 0.25, 1) 0s,
+  //     height 1s cubic-bezier(0.25, 0.75, 0.25, 1) 0.75s;
+  //   // width: 50%;
+  //   width: 100%;
+  // }
 
   &.transition {
-    &:before {
-      height: rem-calc(70);
-      width: 100%;
-    }
+    // &:before {
+    //   height: rem-calc(70);
+    //   width: 100%;
+    // }
 
     .intro-module {
       opacity: 0;
     }
-
-    // .tool-module {
-    //   display: block;
-    // }
   }
 
   .bottom-contents {
@@ -68,7 +70,7 @@
   }
 
   &.tool {
-    height: auto;
+    // height: auto;
 
     .intro-module {
       display: none;
@@ -79,8 +81,9 @@
 
       &.show {
         .sub-head {
-          opacity: 1;
-          transition: opacity 0.5s ease-out 0s;
+          // opacity: 1;
+          // transition: opacity 0.5s ease-out 0s;
+          transform: translateY(0);
         }
 
         .component {

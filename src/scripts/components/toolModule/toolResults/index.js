@@ -150,22 +150,23 @@ class ToolResults extends Component {
         ref={this.resultContainer}
       >
         <div className="grid-container total">
-          <div className="grid-x">
-            <div className="cell" />
-            <div className="cell col-1">{`Results (${productTotal}):`}</div>
-            <div className="cell col-2">
+          <div className="row">
+            <div className="column" />
+            <div className="column">{`Results (${productTotal}):`}</div>
+            <div className="column" />
+            <div className="column">
               {this.getAllocationResult(resultsValue[0])}
             </div>
-            <div className="cell col-1" />
-            <div className="cell col-2">{`${yearRange[0]} - ${
+            <div className="column" />
+            <div className="column">{`${yearRange[0]} - ${
               yearRange[yearRange.length - 1]
             }`}</div>
-            <div className="cell col-1">{resultsValue[1]}</div>
-            <div className="cell col-1">{resultsValue[2]}</div>
-            <div className="cell col-1">{resultsValue[3]}</div>
-            <div className="cell col-1">{resultsValue[4]}</div>
-            <div className="cell col-1">{resultsValue[5]}</div>
-            <div className="cell col-1">{resultsValue[6]}</div>
+            <div className="column">{resultsValue[1]}</div>
+            <div className="column">{resultsValue[2]}</div>
+            <div className="column">{resultsValue[3]}</div>
+            <div className="column">{resultsValue[4]}</div>
+            <div className="column">{resultsValue[5]}</div>
+            <div className="column">{resultsValue[6]}</div>
           </div>
         </div>
 

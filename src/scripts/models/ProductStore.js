@@ -106,6 +106,7 @@ class ProductStore {
         url: `https://www.invesco.com/portal/site/us/etfs/product-detail?productId=${
           product.ticker
         }`,
+        name: product.fundName,
         allocation: initialAllocation,
         criteria: product.criteria,
         maturityDate: timeConverter(product.maturityDate, 'year'),

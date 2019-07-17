@@ -1,5 +1,5 @@
 .product-table {
-  padding-top: rem-calc(15);
+  padding-top: rem-calc(20);
 }
 
 .table-sort,
@@ -8,41 +8,54 @@
   font-size: rem-calc(14);
   font-weight: 300;
 
-  .grid-x {
-    display: table;
+  .row {
+    align-items: center;
+    display: flex;
     width: 100%;
 
-    .cell {
-      display: table-cell;
-      padding: rem-calc(12 14 11);
+    .column {
+      padding: rem-calc(12 15 11);
       text-align: right;
-      vertical-align: middle;
+      width: 7%;
 
-      &.col-1 {
-        width: 9%;
+      &:nth-child(2) {
+        width: calc(8% - 22px);
       }
 
-      &.col-2 {
+      &:nth-child(3) {
+        width: 18%;
+      }
+
+      &:nth-child(4) {
         width: 14%;
       }
 
-      &:nth-child(2) {
-        padding: rem-calc(12 14 11 16);
+      &:nth-child(5) {
+        width: 12%;
       }
 
-      &:nth-child(4) {
-        padding: rem-calc(12 14 11 30);
-        width: calc(14% - 20px);
+      &:nth-child(6) {
+        width: 6%;
       }
 
       &:nth-child(2),
-      &:nth-child(4) {
+      &:nth-child(3),
+      &:nth-child(5) {
         text-align: left;
       }
 
+      &:nth-child(3),
+      &:nth-child(5) {
+        line-height: 1.4;
+      }
+
+      &:nth-child(4) {
+        padding: rem-calc(12 45 11 15);
+      }
+
       &:first-child {
-        padding: rem-calc(12 0 11 2);
-        width: rem-calc(20);
+        padding: rem-calc(12 2 11);
+        width: rem-calc(22);
       }
     }
   }
@@ -50,26 +63,25 @@
 
 .table-sort {
   background-color: $light-gray;
-  border-bottom: 1px solid $gray;
+  // border-bottom: 1px solid $gray;
   color: $black;
-  font-weight: 300;
-  padding: rem-calc(15 0);
+  padding: rem-calc(10 0);
 
   position: sticky;
   top: 0;
   z-index: 2;
 
-  .grid-x .cell {
-    vertical-align: top;
+  .row {
+    align-items: flex-start;
   }
 
-  .cell:nth-child(3) {
+  .column:nth-child(4) {
     div {
       width: 100%;
       text-align: right;
       .sort-text {
         display: block;
-        margin-bottom: rem-calc(6);
+        margin-bottom: rem-calc(10);
       }
     }
   }
@@ -77,32 +89,24 @@
 
 .table-value {
   position: relative;
-
-  .preloader {
-    background-color: rgba($white, 0.85);
-    display: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    &.on {
-      display: block;
-    }
-  }
 }
 
-.table-value .grid-x {
+.table-value .row {
+  background-color: $white;
   border: 1px solid $gray;
   border-left: none;
   border-right: none;
   margin-top: rem-calc(-1);
-  min-height: rem-calc(75);
-  padding: rem-calc(4 0);
-  transition: opacity 0.25s ease-in-out;
+  outline: none;
+  padding: rem-calc(10 0);
+  transition: background-color 0.25s ease-in-out;
 
-  .cell:nth-child(2) {
+  .column {
+    font-weight: 300;
+    transition: opacity 0.25s ease-in-out, padding 0.25s ease-in-out;
+  }
+
+  .column:nth-child(2) {
     color: $dark-blue;
     font-weight: 600;
     text-transform: uppercase;
@@ -113,12 +117,17 @@
     position: relative;
 
     input {
+      background-color: $light-gray;
+      border-color: $light-gray;
       color: $black;
       font-size: rem-calc(14);
-      // padding: rem-calc(8 10);
       padding: rem-calc(10);
       text-align: right;
       width: 100%;
+
+      &:focus {
+        border-color: $dark-blue;
+      }
     }
 
     .usd-option {
@@ -142,37 +151,20 @@
   }
 
   &.faded {
-    opacity: 0.2;
+    .column {
+      opacity: 0.25;
+    }
+
+    .column:first-child {
+      opacity: 1;
+    }
+
+    .column:nth-child(2) {
+      color: $black;
+    }
   }
 
   &.hide {
     display: none;
   }
 }
-
-// .dot-InvestmentGrade,
-// .dot-HighYield,
-// .dot-EmergingMarketsdebt,
-// .dot-MunicipalFixedIncome {
-//   border-radius: 50%;
-//   display: inline-block;
-//   height: rem-calc(12);
-//   margin-top: rem-calc(3);
-//   width: rem-calc(12);
-// }
-
-// .dot-InvestmentGrade {
-//   background-color: $dark-blue;
-// }
-
-// .dot-HighYield {
-//   background-color: $blue;
-// }
-
-// .dot-EmergingMarketsdebt {
-//   background-color: $blue-gray;
-// }
-
-// .dot-MunicipalFixedIncome {
-//   background-color: $mint;
-// }

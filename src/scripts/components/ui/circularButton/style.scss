@@ -35,6 +35,16 @@ a.circle-btn:visited {
       width: rem-calc(26);
     }
   }
+
+  &.inactive {
+    cursor: default;
+    opacity: 0.3;
+
+    span {
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
 }
 
 a.circle-btn:hover span {

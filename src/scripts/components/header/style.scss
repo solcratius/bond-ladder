@@ -1,17 +1,19 @@
 header {
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
+  background-color: $dark-blue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 10;
 
   .nav-strip {
     align-items: center;
     display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
     justify-content: space-between;
     min-height: rem-calc(42);
     min-width: rem-calc(310);
-    padding: rem-calc(60 0);
+    // padding: rem-calc(60 0);
     width: 100%;
+
+    padding: rem-calc(14 0);
   }
 
   .logo,
@@ -48,7 +50,9 @@ header {
     font-weight: 400;
     font-size: rem-calc(16);
     margin-bottom: 0;
-    opacity: 0;
+    // opacity: 0;
+
+    opacity: 1;
   }
 
   nav {
@@ -67,7 +71,8 @@ header {
     }
 
     .util-btn {
-      color: $dark-blue;
+      // color: $dark-blue;
+      color: $white;
       cursor: pointer;
       display: block;
       font-size: rem-calc(26);
@@ -82,7 +87,8 @@ header {
       }
 
       &:active {
-        color: rgba($dark-blue, 0.5);
+        // color: rgba($dark-blue, 0.5);
+        color: $blue;
         transition: color 0.1s ease-in-out;
       }
     }

@@ -90,6 +90,7 @@ class TableRow extends Component {
       {
         ticker,
         url,
+        name,
         criteria,
         maturityDate,
         yieldToMaturity,
@@ -105,10 +106,8 @@ class TableRow extends Component {
     // console.log(`investment: ${this.props.appStore.User.investment}`);
 
     return (
-      <div
-        className={`grid-x${selected ? '' : ' faded'}${show ? '' : ' hide'}`}
-      >
-        <div className="cell">
+      <div className={`row${selected ? '' : ' faded'}${show ? '' : ' hide'}`}>
+        <div className="column">
           <CheckBox
             id="0"
             isChecked={selected}
@@ -116,10 +115,13 @@ class TableRow extends Component {
             onChange={this.onProductSelectUpdate}
           />
         </div>
-        <div className="cell col-1">
+        <div className="column">
           <Link to={url}>{ticker}</Link>
         </div>
-        <div className="cell col-2">
+        <div className="column">
+          <Link to={url}>{name}</Link>
+        </div>
+        <div className="column">
           <div
             className={`allocation-field${
               !allocationPercentFormat ? ' usd' : ''
@@ -132,18 +134,16 @@ class TableRow extends Component {
             <span className="usd-option">$</span>
           </div>
         </div>
-        <div className="cell col-2">{criteria}</div>
-        <div className="cell col-1">{maturityDate}</div>
-        <div className="cell col-1">{numberFormat(yieldToMaturity)}</div>
-        <div className="cell col-1">{numberFormat(yieldToWorst)}</div>
-        <div className="cell col-1">{numberFormat(effectiveDuration)}</div>
-        <div className="cell col-1">{numberFormat(monthSecYield)}</div>
-        <div className="cell col-1">
+        <div className="column">{criteria}</div>
+        <div className="column">{maturityDate}</div>
+        <div className="column">{numberFormat(yieldToMaturity)}</div>
+        <div className="column">{numberFormat(yieldToWorst)}</div>
+        <div className="column">{numberFormat(effectiveDuration)}</div>
+        <div className="column">{numberFormat(monthSecYield)}</div>
+        <div className="column">
           {distributionRate === null ? 'N/A' : numberFormat(distributionRate)}
         </div>
-        <div className="cell col-1">
-          {numberFormat(numberOfHoldings, '', true)}
-        </div>
+        <div className="column">{numberFormat(numberOfHoldings, '', true)}</div>
       </div>
     );
   }

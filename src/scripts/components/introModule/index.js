@@ -42,7 +42,7 @@ const IntroMoldule = inject('appStore')(
               BulletShares<sup>®</sup> ETF <br />
               Bond Ladder Tool
             </h2>
-            <img src="images/fpo-chart0.gif" alt="" />
+            {/* <img src="images/fpo-chart0.gif" alt="" /> */}
             <p>
               Build a hypothetical BulletShares Ladder, based on maturity,
               geography, and credit criteria, using the BulletShares ETF Bond

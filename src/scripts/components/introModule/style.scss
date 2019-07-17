@@ -2,7 +2,7 @@
   display: block;
   transition: opacity 0.5s ease-in-out;
   padding: rem-calc(100 0 120);
-  top: calc(50vh - 132px);
+  top: calc(50vh - 50px);
   transform: translateY(-50%);
 }
 
@@ -13,27 +13,31 @@
 }
 
 .intro-module .container {
-  display: table;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
   .intro-title {
-    color: $white;
-    display: table-cell;
-    // margin: rem-calc(40 0 0);
+    color: $dark-blue;
+    flex-grow: 1;
     vertical-align: middle;
-    width: 50%;
   }
 
   h2 {
+    font-size: rem-calc(64);
     line-height: 1.2;
-    padding-bottom: rem-calc(20);
+    margin-bottom: rem-calc(60);
+    margin-left: rem-calc(-3);
+    padding-bottom: rem-calc(30);
     position: relative;
     white-space: nowrap;
 
     &:after {
-      border-bottom: rem-calc(5) solid $dark-blue;
-      bottom: rem-calc(2);
+      border-bottom: rem-calc(7) solid $dark-blue;
+      bottom: rem-calc(3);
       content: '';
-      left: rem-calc(4);
+      left: rem-calc(5);
       position: absolute;
       width: rem-calc(60);
     }
@@ -49,8 +53,10 @@
   }
 
   .intro-content {
-    display: table-cell;
-    padding-left: rem-calc(80);
+    background-color: $white;
+    border: 1px solid $gray;
+    padding: rem-calc(40 60);
+    min-width: rem-calc(480);
     vertical-align: middle;
 
     input[type='text'],
@@ -72,14 +78,21 @@
   }
 
   .eyebrow {
-    color: $black;
+    color: $dark-blue;
+    // font-size: rem-calc(18);
     font-weight: 400;
-    margin-bottom: rem-calc(10);
+    margin-bottom: rem-calc(12);
+    position: relative;
     text-transform: uppercase;
   }
 
   input {
+    background-color: $light-gray;
+    border-color: $light-gray;
+    border-radius: rem-calc(4);
+    color: $black;
     font-size: rem-calc(22);
+    font-weight: 300;
     height: rem-calc(70);
     max-width: none;
     width: 100%;
@@ -88,7 +101,7 @@
   .rect-btn {
     border-radius: 0;
     float: right;
-    margin-top: rem-calc(40);
+    margin-top: rem-calc(30);
     padding: rem-calc(18 0);
   }
 }

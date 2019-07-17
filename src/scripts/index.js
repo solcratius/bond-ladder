@@ -12,8 +12,6 @@ import Product from './models/ProductStore';
 import Tool from './models/ToolStore';
 import User from './models/UserStore';
 
-// import Store from './models/Store';
-
 const stores = {
   Common,
   Product,
@@ -23,8 +21,6 @@ const stores = {
 
 UserAgent.set();
 WindowSize.init();
-
-// const appStore = new Store();
 
 render(
   <Provider appStore={stores}>

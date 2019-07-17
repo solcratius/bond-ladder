@@ -66,7 +66,7 @@ const ToolProfile = inject('appStore')(
               </div>
             </div>
             <div className="cell medium-2 download-report">
-              <CircularButton className="icon-download">
+              <CircularButton inActive={true} className="icon-download">
                 Download Report
               </CircularButton>
             </div>

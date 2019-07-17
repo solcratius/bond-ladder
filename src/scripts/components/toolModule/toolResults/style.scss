@@ -15,21 +15,36 @@
     position: relative;
   }
 
-  .grid-x {
-    .cell:nth-child(2) {
+  .row {
+    .column:nth-child(2) {
       color: $dark-blue;
       font-weight: 600;
       padding: rem-calc(12 8 11 2);
       text-align: left;
-      width: 11%;
+      white-space: nowrap;
+      width: 26%;
     }
 
-    .cell:nth-child(3) {
-      padding: rem-calc(12 8 11);
-      width: 12%;
+    .column:nth-child(3) {
+      padding: 0;
+      width: 0;
     }
 
-    .cell:first-child {
+    .column:nth-child(4) {
+      padding: rem-calc(12 55 11 15);
+    }
+
+    .column:nth-child(5) {
+      padding: 0;
+      width: 0;
+    }
+
+    .column:nth-child(6) {
+      white-space: nowrap;
+      width: 18%;
+    }
+
+    .column:first-child {
       padding: 0;
       width: 0;
     }
