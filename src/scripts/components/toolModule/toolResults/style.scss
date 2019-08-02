@@ -1,63 +1,134 @@
 .table-result {
-  background-color: $light-gray;
-  border-top: 1px solid $gray;
-  margin-top: -1px;
-  font-size: rem-calc(18);
-  font-weight: 400;
-  z-index: 50;
+  // background-color: $light-gray;
+  // border-top: 1px solid $gray;
+  // font-size: rem-calc(18);
+  // font-weight: 400;
+  // margin-top: -1px;
+  // width: 100%;
+  // z-index: 50;
 
-  .grid-container {
-    padding-bottom: rem-calc(22);
-    padding-top: rem-calc(22);
-  }
+  .total-value {
+    background-color: $light-gray;
+    border-top: 1px solid $gray;
+    box-shadow: rem-calc(0 0 8) rgba($black, 0.18);
+    color: $black;
+    font-size: rem-calc(12);
+    font-weight: 600;
+    height: rem-calc(70);
+    left: 0;
+    padding-bottom: rem-calc(4);
+    padding-top: rem-calc(5);
+    position: fixed;
+    top: calc(100vh - 70px);
+    transform: translateY(110%);
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    z-index: 50;
 
-  .total {
-    position: relative;
+    @include breakpoint(large up) {
+      font-size: rem-calc(14);
+    }
+
+    // .grid-container {
+    //   width: rem-calc(1024);
+
+    //   @include breakpoint(xxmedium up) {
+    //     width: 100%;
+    //   }
+
+    //   @include breakpoint(small down) {
+    //     width: 100%;
+    //   }
+    // }
   }
 
   .row {
-    .column:nth-child(2) {
-      color: $dark-blue;
-      font-weight: 600;
-      padding: rem-calc(12 8 11 2);
-      text-align: left;
-      white-space: nowrap;
-      width: 26%;
-    }
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 100%;
 
-    .column:nth-child(3) {
+    @include breakpoint(xmedium down) {
       padding: 0;
-      width: 0;
     }
 
-    .column:nth-child(4) {
-      padding: rem-calc(12 55 11 15);
-    }
+    .column {
+      display: none;
+      line-height: rem-calc(60);
+      padding-top: 0;
+      padding-bottom: 0;
 
-    .column:nth-child(5) {
-      padding: 0;
-      width: 0;
-    }
+      @include breakpoint(xxmedium up) {
+        display: block;
+      }
 
-    .column:nth-child(6) {
-      white-space: nowrap;
-      width: 18%;
-    }
+      @include breakpoint(xmedium down) {
+        line-height: rem-calc(40);
+      }
 
-    .column:first-child {
-      padding: 0;
-      width: 0;
+      &:first-child {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &:nth-child(2) {
+        white-space: nowrap;
+        // width: calc(34% - 74px);
+      }
+
+      .column-item {
+        line-height: rem-calc(60);
+
+        &:first-child {
+          color: $dark-blue;
+          min-width: rem-calc(75);
+          padding: rem-calc(0 0 0 2);
+          text-align: left;
+          text-transform: uppercase;
+
+          @include breakpoint(xmedium down) {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          padding: rem-calc(0 15);
+          flex-grow: 1;
+
+          @include breakpoint(xmedium down) {
+            padding-left: 0;
+          }
+        }
+
+        &:last-child {
+          padding: rem-calc(0 35 0 15);
+          text-align: right;
+
+          @include breakpoint(xmedium down) {
+            bottom: auto;
+            left: auto;
+            padding: rem-calc(0 12);
+            position: relative;
+            top: auto;
+            transform: none;
+          }
+
+          @include breakpoint(medium down) {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 
   .chevron-btn {
     display: none;
-    right: rem-calc(30);
-    top: rem-calc(30);
+    right: rem-calc(20);
+    top: rem-calc(20);
   }
 
   .warning {
-    color: red;
+    color: #ef0019;
     animation: warning-animation 1s 1;
   }
 
@@ -66,10 +137,10 @@
       color: $black;
     }
     20% {
-      color: red;
+      color: #ef0019;
     }
     40% {
-      color: red;
+      color: #ef0019;
     }
     60% {
       color: $black;
@@ -78,44 +149,242 @@
       color: $black;
     }
     100% {
-      color: red;
+      color: #ef0019;
     }
   }
 
   &.fixed {
-    border-top: 1px solid $gray;
-    bottom: 0;
-    box-shadow: rem-calc(0 0 8) rgba($black, 0.18);
-    left: 0;
-    min-height: calc(100vh - 245px);
-    position: fixed;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
+    .chevron-btn {
+      // @include breakpoint(xsmall up) {
+      //   display: inline-block;
+      // }
 
-    &.no-anim {
-      transition: none;
-    }
+      // @include breakpoint(xxmedium up) {
+      //   display: none;
+      // }
 
-    .grid-container {
-      padding-bottom: rem-calc(16);
-      padding-top: rem-calc(16);
-
-      @include breakpoint(medium up) {
-        padding-bottom: rem-calc(22);
-        padding-top: rem-calc(22);
+      @include breakpoint(1420 up) {
+        display: inline-block;
       }
     }
 
-    .chevron-btn {
-      display: inline-block;
+    .total-value {
+      transform: translateY(0);
     }
   }
 
-  &.expand {
-    transform: translateY(0);
+  // .table-result-value {
+  //   padding-bottom: rem-calc(40);
+  // }
+  .total-output {
+    align-items: center;
+    border-top: 1px solid $black;
+    display: flex;
+    justify-content: space-between;
+    padding: rem-calc(40 15 0 0);
+    text-align: left;
 
-    // .chevron-btn {
-    //   display: inline-block;
-    // }
+    span {
+      display: block;
+      padding-right: rem-calc(40);
+      white-space: normal;
+    }
+
+    .value {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  .result-row {
+    align-items: center;
+    border: 1px solid $gray;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    font-size: rem-calc(12);
+    font-weight: 300;
+    justify-content: flex-end;
+    margin-top: rem-calc(-1);
+    min-height: rem-calc(80);
+    width: 100%;
+
+    @include breakpoint(large up) {
+      font-size: rem-calc(14);
+    }
+
+    .column {
+      flex-basis: calc(50% - 74px);
+      padding: rem-calc(11 15 10);
+      text-align: right;
+
+      @include breakpoint(xsmall up) {
+        flex-basis: calc(33.3333% - 74px);
+      }
+
+      @include breakpoint(xxsmall up) {
+        flex-basis: 12%;
+      }
+
+      @include breakpoint(medium up) {
+        flex-basis: 10%;
+      }
+
+      @include breakpoint(xxmedium up) {
+        flex-basis: 9%;
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        line-height: 1.4;
+        padding: rem-calc(11 15 10 0);
+        text-align: left;
+      }
+
+      &:first-child {
+        color: $dark-blue;
+        flex-basis: rem-calc(56);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      &:nth-child(2) {
+        display: none;
+        flex-grow: 1;
+
+        @include breakpoint(xxsmall up) {
+          display: block;
+        }
+      }
+
+      &:nth-child(5) {
+        display: none;
+
+        @include breakpoint(xsmall up) {
+          display: block;
+        }
+      }
+
+      &:nth-child(6) {
+        display: none;
+
+        @include breakpoint(xxmedium up) {
+          display: block;
+        }
+      }
+
+      &:nth-child(7) {
+        display: none;
+
+        @include breakpoint(xmedium up) {
+          display: block;
+        }
+      }
+
+      &.price {
+        color: $black;
+        // flex-basis: 14%;
+        flex-basis: rem-calc(165);
+        padding: rem-calc(11 15 10);
+        position: relative;
+
+        @include breakpoint(xsmall up) {
+          padding: rem-calc(11 15 10 30);
+        }
+
+        input {
+          background-color: $light-gray;
+          border-color: $light-gray;
+          color: $black;
+          font-size: rem-calc(12);
+          padding: rem-calc(10);
+          text-align: right;
+          width: 100%;
+
+          @include breakpoint(large up) {
+            font-size: rem-calc(14);
+          }
+
+          @include breakpoint(xsmall up) {
+            width: 85%;
+          }
+
+          &:focus {
+            border-color: $dark-blue;
+          }
+        }
+
+        .usd-option {
+          color: $medium-gray;
+          font-size: rem-calc(12);
+          font-weight: 400;
+          left: rem-calc(18);
+          line-height: rem-calc(18);
+          margin-top: rem-calc(-9);
+          position: absolute;
+          top: 50%;
+
+          @include breakpoint(large up) {
+            font-size: rem-calc(14);
+          }
+
+          @include breakpoint(xsmall up) {
+            left: calc(15% + 33px);
+          }
+        }
+
+        &.usd {
+          input {
+            padding-left: rem-calc(40);
+          }
+          .usd-option {
+            display: block;
+          }
+        }
+      }
+
+      &:last-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .table-result-sort {
+    // padding-top: rem-calc(10);
+
+    .result-row {
+      align-items: flex-end;
+      border-top: none;
+      min-height: 0;
+    }
+
+    .column {
+      color: $medium-gray;
+      font-size: rem-calc(12);
+      padding-bottom: rem-calc(15) !important;
+
+      // &:first-child,
+      // &:nth-child(2) {
+      //   padding-bottom: rem-calc(15);
+      // }
+
+      &:first-child {
+        font-weight: 300;
+        color: $medium-gray;
+        text-transform: none;
+      }
+
+      &.price {
+        color: $medium-gray;
+        // padding-right: rem-calc(25);
+      }
+
+      // &:last-child {
+      //   color: $black;
+      // }
+      &:last-child {
+        font-weight: 300;
+      }
+    }
   }
 }

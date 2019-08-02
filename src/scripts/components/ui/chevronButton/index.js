@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import './style.scss';
 import React from 'react';
 
@@ -8,7 +9,9 @@ const ChevronButton = props => {
     textLabel =
       children && typeof children === 'string'
         ? children
-        : children[toggleState !== undefined ? 1 : 0],
+        : children
+        ? children[toggleState !== undefined ? 1 : 0]
+        : null,
     onClickHandler = event => {
       event.preventDefault();
       onClick();

@@ -4,7 +4,7 @@ textarea.editLadderName {
   border: 2px solid $gray;
   border-radius: rem-calc(4);
   color: $dark-blue;
-  font-size: rem-calc(18);
+  font-size: rem-calc(14);
   max-width: rem-calc(380);
   outline: none !important;
   padding: rem-calc(13);
@@ -30,6 +30,10 @@ textarea.editLadderName {
   &::-ms-input-placeholder {
     /* Microsoft Edge */
     color: $gray;
+  }
+
+  @include breakpoint(xxmedium up) {
+    font-size: rem-calc(18);
   }
 }
 
@@ -78,7 +82,7 @@ textarea.editLadderName {
     margin-left: 0;
     max-width: 100%;
     // padding: rem-calc(6 44 5 14);
-    padding: rem-calc(6 20 5 14);
+    padding: rem-calc(5 16 4 10);
 
     &::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -95,6 +99,10 @@ textarea.editLadderName {
       /* Microsoft Edge */
       color: rgba($white, 0.15);
     }
+
+    @include breakpoint(large up) {
+      padding: rem-calc(6 20 5 14);
+    }
   }
 
   input[type='text']:hover ~ .modify-btn,
@@ -104,9 +112,14 @@ textarea.editLadderName {
 
   .modify-btn {
     // bottom: rem-calc(16);
-    bottom: rem-calc(12);
+    bottom: rem-calc(8);
     position: absolute;
-    right: rem-calc(12);
+    right: rem-calc(8);
+
+    @include breakpoint(xxmedium up) {
+      bottom: rem-calc(12);
+      right: rem-calc(12);
+    }
   }
 
   &.is-focus {
@@ -114,8 +127,12 @@ textarea.editLadderName {
 
     input[type='text'],
     input[type='number'] {
-      padding: rem-calc(6 14 5);
+      padding: rem-calc(5 10 4);
       width: 100% !important;
+
+      @include breakpoint(large up) {
+        padding: rem-calc(6 14 5);
+      }
     }
 
     .modify-btn {

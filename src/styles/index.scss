@@ -65,13 +65,40 @@ p {
 .eyebrow {
   color: $dark-blue;
   display: block;
-  font-size: rem-calc(14);
-}
+  font-size: rem-calc(12);
 
-.grid-table {
-  display: table;
-
-  & > .cell {
-    display: table-cell;
+  @include breakpoint(medium up) {
+    font-size: rem-calc(14);
   }
 }
+
+.flex-grid {
+  display: flex;
+
+  // & > .column {
+  //   flex-basis: auto;
+  // }
+}
+
+// .grid-table {
+//   display: table;
+
+//   & > .cell {
+//     display: table-cell;
+//   }
+// }
+
+// .grid-container {
+//   padding-left: rem-calc(10) !important;
+//   padding-right: rem-calc(10) !important;
+
+//   @include breakpoint(medium up) {
+//     padding-left: rem-calc(40) !important;
+//     padding-right: rem-calc(80) !important;
+//   }
+
+//   @include breakpoint(xlarge up) {
+//     padding-left: rem-calc(30) !important;
+//     padding-right: rem-calc(30) !important;
+//   }
+// }

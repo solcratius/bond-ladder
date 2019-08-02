@@ -1,116 +1,87 @@
 /* eslint-disable no-nested-ternary */
 import './style.scss';
 import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
+import { animateScroll } from 'react-scroll';
 import {
   cleanNumber,
   numberFormat,
   percentFormat
 } from '../../helper/formatting';
-import { WindowScroll, WindowSize } from '../../helper/window';
+import { WindowScroll } from '../../helper/window';
 import ChevronButton from '../../ui/chevronButton';
 import ExpandedContainer from './expandedContainer';
 
+@inject('appStore')
+@observer
 class ToolResults extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      expand: false,
-      fixed: false,
-      newY: '100%',
-      noAnim: true
+      fixed: false
     };
 
-    this.resultContainer = React.createRef();
+    this.resultsTop = 0;
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.updateScrollEvent, false);
   }
 
   componentDidUpdate(prevProps) {
-    const resultsTop = this.props.tableBottomY - WindowSize.getHeight() + 165;
+    const { appState, tableBottomY, winHeight } = this.props;
 
-    if (prevProps.appState !== this.props.appState) {
-      this.setState(
-        {
-          fixed: true
-        },
-        () => {
-          this.setResultsPos(true);
-        }
-      );
-      window.addEventListener(
-        'scroll',
-        this.updateScrollEvent.bind(null, resultsTop),
-        false
-      );
+    if (prevProps.appState !== appState) {
+      this.setState({
+        fixed: true
+      });
     }
 
-    if (prevProps.tableBottomY !== this.props.tableBottomY) {
-      this.setState(
-        {
-          fixed: !(resultsTop <= WindowScroll.getLivePos())
-        },
-        () => {
-          this.setResultsPos(true);
-        }
-      );
+    if (
+      prevProps.tableBottomY !== tableBottomY ||
+      prevProps.winHeight !== winHeight
+    ) {
+      this.resultsTop = tableBottomY - winHeight + 71;
+      // console.log(`updated:${this.resultsTop}`);
 
-      window.removeEventListener('scroll', this.updateScrollEvent, false);
-      window.addEventListener(
-        'scroll',
-        this.updateScrollEvent.bind(null, resultsTop),
-        false
-      );
-      window.resultsTop = resultsTop;
+      this.setState({
+        fixed: !(this.resultsTop <= WindowScroll.getLivePos())
+      });
     }
   }
 
-  updateScrollEvent = resultsTop => {
-    this.setState(
-      {
-        noAnim: true,
-        fixed: !(resultsTop <= WindowScroll.getLivePos())
-      },
-      () => {
-        this.setResultsPos();
-      }
-    );
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.updateScrollEvent, false);
+  }
+
+  getYearRange = years => {
+    const beginningYear = years[0],
+      endingYear = years[years.length - 1];
+
+    return beginningYear === endingYear
+      ? endingYear
+      : `${beginningYear} - ${endingYear}`;
   };
 
-  getNewY = () => {
-    const resultContainer = this.resultContainer.current;
-    return `${resultContainer.getBoundingClientRect().height - 90}px`;
+  updateScrollEvent = () => {
+    // console.log(`${this.resultsTop} ${WindowScroll.getLivePos()}`);
+    this.setState({
+      fixed: !(this.resultsTop <= WindowScroll.getLivePos())
+    });
   };
 
-  expandToggle = () => {
-    this.setState(
-      {
-        expand: !this.state.expand,
-        noAnim: false
-      },
-      () => {
-        this.setResultsPos(true);
-      }
-    );
-  };
-
-  setResultsPos = delay => {
-    this.setState(
-      {
-        newY: this.getNewY()
-      },
-      () => {
-        if (delay) {
-          setTimeout(() => {
-            this.setState({ noAnim: true });
-          }, 500);
-        }
-      }
-    );
+  anchorToResult = () => {
+    // animateScroll.scrollTo(this.props.tableBottomY + 93);
+    animateScroll.scrollTo(this.props.tableBottomY + 181);
+    // animateScroll.scrollTo(this.props.tableBottomY);
   };
 
   getAllocationResult = value => {
     const {
         allocationPercentFormat,
         totalInvestment,
+        updateDownloadState,
         updateInvestment
       } = this.props,
       result =
@@ -118,68 +89,69 @@ class ToolResults extends Component {
           ? 'N/A'
           : allocationPercentFormat
           ? percentFormat((value / totalInvestment) * 100)
-          : numberFormat(value, '$');
+          : numberFormat(value, '$'),
+      downloadState = !(allocationPercentFormat && cleanNumber(result) !== 100);
+
+    updateDownloadState(downloadState);
 
     if (!allocationPercentFormat) {
       updateInvestment(cleanNumber(result));
     }
 
-    return (
-      <span
-        className={
-          allocationPercentFormat && cleanNumber(result) !== 100
-            ? 'warning'
-            : ''
-        }
-      >
-        {result}
-      </span>
-    );
+    return <span className={!downloadState ? 'warning' : ''}>{result}</span>;
   };
 
   render() {
-    const { expand, fixed, newY, noAnim } = this.state,
-      { productTotal, resultsValue, yearRange } = this.props;
+    const { fixed } = this.state,
+      { productTotal, resultsValue, yearRange } = this.props,
+      yearRangeFinal = this.getYearRange(yearRange);
 
     return (
-      <div
-        className={`table-result${fixed ? ' fixed' : ''}${
-          expand ? ' expand' : ''
-        }${noAnim ? ' no-anim' : ''}`}
-        style={fixed ? { transform: `translateY(${expand ? 0 : newY})` } : {}}
-        ref={this.resultContainer}
-      >
-        <div className="grid-container total">
-          <div className="row">
-            <div className="column" />
-            <div className="column">{`Results (${productTotal}):`}</div>
-            <div className="column" />
-            <div className="column">
-              {this.getAllocationResult(resultsValue[0])}
+      <div className={`table-result${fixed ? ' fixed' : ''}`}>
+        <div className="total-value">
+          <div className="grid-container">
+            <div className="row">
+              <div className="column">
+                <div className="column-item">{`Results:`}</div>
+                <div className="column-item">{`${productTotal} fund${
+                  productTotal > 1 ? 's' : ''
+                }`}</div>
+                <div className="column-item">
+                  {this.getAllocationResult(resultsValue[0])}
+                </div>
+              </div>
+              <div className="column">{yearRangeFinal}</div>
+              <div className="column">{resultsValue[1]}</div>
+              <div className="column">{resultsValue[2]}</div>
+              <div className="column">
+                {/* <span>
+                  {`${resultsValue[3]}yr${
+                    cleanNumber(resultsValue[3]) !== 1 ? 's' : ''
+                  }`}
+                </span> */}
+                {resultsValue[3]}
+              </div>
+              <div className="column">{resultsValue[4]}</div>
+              <div className="column">{resultsValue[5]}</div>
+              <div className="column">{resultsValue[6]}</div>
             </div>
-            <div className="column" />
-            <div className="column">{`${yearRange[0]} - ${
-              yearRange[yearRange.length - 1]
-            }`}</div>
-            <div className="column">{resultsValue[1]}</div>
-            <div className="column">{resultsValue[2]}</div>
-            <div className="column">{resultsValue[3]}</div>
-            <div className="column">{resultsValue[4]}</div>
-            <div className="column">{resultsValue[5]}</div>
-            <div className="column">{resultsValue[6]}</div>
           </div>
+          <ChevronButton
+            color="dark-blue"
+            direction="down"
+            onClick={this.anchorToResult}
+            toggle={false}
+          />
         </div>
-
-        <ExpandedContainer />
-
-        <ChevronButton
-          color="dark-blue"
-          direction="up"
-          onClick={this.expandToggle}
-          toggle={expand}
-        >
-          {['Open', 'Close']}
-        </ChevronButton>
+        <ExpandedContainer
+          appState={this.props.appStore.Tool.appState}
+          asOfDate={this.props.appStore.Product.asOfDate}
+          currentProducts={this.props.appStore.Product.currentProducts}
+          ladderName={this.props.appStore.User.ladderName}
+          investment={this.props.appStore.User.investment}
+          resultsValue={resultsValue}
+          yearRange={yearRangeFinal}
+        />
       </div>
     );
   }

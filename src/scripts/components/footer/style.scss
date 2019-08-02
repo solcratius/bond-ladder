@@ -25,7 +25,7 @@ footer {
     }
 
     @include clearfix();
-    padding: rem-calc(0 0 20);
+    padding: rem-calc(0 0 30);
   }
 
   .social-title {
@@ -35,8 +35,14 @@ footer {
   .social-links {
     @include clearfix();
     padding: rem-calc(0 0 20);
+    // white-space: nowrap;
+
+    @include breakpoint(medium up) {
+      padding: 0;
+    }
 
     li {
+      // display: inline-block;
       float: left;
 
       a {
@@ -52,7 +58,7 @@ footer {
       display: inline-block;
       height: rem-calc(38);
       font-size: rem-calc(24);
-      margin: rem-calc(10 20 10 0);
+      margin: rem-calc(10 17 10 0);
       text-align: center;
       transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
       width: rem-calc(38);
@@ -104,6 +110,10 @@ footer {
       margin-bottom: rem-calc(24);
     }
   }
+}
+
+footer {
+  background-color: $navy;
 }
 
 // .methodology,

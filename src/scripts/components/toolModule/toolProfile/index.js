@@ -1,12 +1,13 @@
 import './style.scss';
 import React from 'react';
 import { inject, observer } from 'mobx-react';
-
+import { animateScroll } from 'react-scroll';
 import { numberFormat } from '../../helper/formatting';
 
 import NameInput from '../../ui/inputFields/NameInput';
 import ValueInput from '../../ui/inputFields/ValueInput';
 import CircularButton from '../../ui/circularButton';
+// import RectangularButton from '../../ui/rectangularButton';
 
 const ToolProfile = inject('appStore')(
   observer(props => {
@@ -14,6 +15,7 @@ const ToolProfile = inject('appStore')(
         appState,
         allocationEqualWeight,
         // allocationPercentFormat,
+        // downloadState,
         updateAllocationEqualWeight,
         updateProductAllocation
       } = props.appStore.Tool,
@@ -36,40 +38,57 @@ const ToolProfile = inject('appStore')(
 
         updateProductAllocation();
       },
-      investmentAmount = numberFormat(investment, '$');
+      investmentAmount = numberFormat(investment, '$'),
+      // generatePDF = () => {
+      //   // eslint-disable-next-line no-alert
+      //   alert('PDF coming soon');
+      // };
+      anchorToResult = () => {
+        // animateScroll.scrollTo(this.props.tableBottomY + 93);
+        animateScroll.scrollTo(props.tableBottomY + 181);
+        // animateScroll.scrollTo(this.props.tableBottomY);
+      };
 
     return (
       <div className="sub-head">
         <div className="grid-container">
-          <div className="grid-x">
-            <div className="cell medium-6 ladder-name">
-              <span className="eyebrow">Ladder Name</span>
-              <NameInput
+          <div className="ladder-name">
+            <span className="eyebrow">Ladder Name</span>
+            <NameInput
+              appState={appState}
+              className="editLadderName"
+              flexibleInput
+              name="ladderName"
+              onUpdateDone={onNameUpdate}
+              value={ladderName}
+            />
+          </div>
+          <div className="investment-input">
+            <div>
+              <span className="eyebrow">Investment Amount</span>
+              <ValueInput
                 appState={appState}
-                className="editLadderName"
                 flexibleInput
-                name="ladderName"
-                onUpdateDone={onNameUpdate}
-                value={ladderName}
+                name="investment"
+                onUpdateDone={onValueUpdate}
+                value={investmentAmount}
               />
             </div>
-            <div className="cell medium-4 investment-input">
-              <div>
-                <span className="eyebrow">Investment Amount</span>
-                <ValueInput
-                  appState={appState}
-                  flexibleInput
-                  name="investment"
-                  onUpdateDone={onValueUpdate}
-                  value={investmentAmount}
-                />
-              </div>
-            </div>
-            <div className="cell medium-2 download-report">
-              <CircularButton inActive={true} className="icon-download">
-                Download Report
-              </CircularButton>
-            </div>
+          </div>
+          <div className="download-report">
+            <CircularButton
+              // inActive={!downloadState}
+              className="icon-arrowdown"
+              onClick={anchorToResult}
+            >
+              View My Report
+            </CircularButton>
+            {/* <RectangularButton
+              className={`mint${!downloadState ? ' inactive' : ''}`}
+              onClick={generatePDF}
+            >
+              Download Report
+            </RectangularButton> */}
           </div>
         </div>
       </div>

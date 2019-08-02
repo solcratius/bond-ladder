@@ -3,7 +3,7 @@ import { observable, computed, action } from 'mobx';
 import {
   cleanNumber,
   numberFormat,
-  percentFormat,
+  // percentFormat,
   timeConverter
 } from '../components/helper/formatting';
 import Common from './CommonStore';
@@ -47,6 +47,17 @@ class ProductStore {
     );
   }
 
+  @computed
+  get selectedYears() {
+    return this.currentYears.filter(year => {
+      return this.currentProducts.some(product => {
+        return (
+          product.selected && product.show && product.maturityDate === year
+        );
+      });
+    });
+  }
+
   // @computed
   // get currentProductResults() {
   //   return Common.productResultsProp.map((key, i) => {
@@ -85,9 +96,10 @@ class ProductStore {
             ? 'N/A'
             : i < 1
             ? sum
-            : i !== 6
-            ? percentFormat(sum)
-            : numberFormat(sum, '', true);
+            : i !== 3 && i !== 6
+            ? // ? percentFormat(sum)
+              numberFormat(sum)
+            : numberFormat(sum, '', i === 6);
 
       return result;
     });

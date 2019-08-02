@@ -39,8 +39,9 @@ const IntroMoldule = inject('appStore')(
         <div className="container">
           <div className="intro-title">
             <h2>
-              BulletShares<sup>®</sup> ETF <br />
-              Bond Ladder Tool
+              {/* BulletShares<sup>®</sup> ETF <br />
+              Bond Ladder Tool */}
+              BulletShares<sup>®</sup> ETF Bond Ladder Tool
             </h2>
             {/* <img src="images/fpo-chart0.gif" alt="" /> */}
             <p>

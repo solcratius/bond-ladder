@@ -1,61 +1,193 @@
 .product-table {
-  padding-top: rem-calc(20);
+  // overflow-x: auto;
+  // overflow-y: inherit;
+  padding-top: 0;
+  // width: calc(100% + 15px);
+  width: 100%;
+
+  @include breakpoint(xsmall up) {
+    padding-top: rem-calc(25);
+  }
+
+  @include breakpoint(xxmedium up) {
+    // overflow: inherit;
+    padding-top: rem-calc(15);
+    // width: 100%;
+  }
+
+  // @include breakpoint(small down) {
+  //   overflow: inherit;
+  //   width: 100%;
+  // }
+
+  // .scrollable-table {
+  //   min-height: 100%;
+  //   position: relative;
+  //   width: rem-calc(1024);
+
+  //   @include breakpoint(xxmedium up) {
+  //     width: 100%;
+  //   }
+
+  //   @include breakpoint(small down) {
+  //     width: 100%;
+  //   }
+  // }
 }
 
 .table-sort,
 .table-value,
 .table-result {
-  font-size: rem-calc(14);
+  font-size: rem-calc(12);
   font-weight: 300;
+
+  @include breakpoint(large up) {
+    font-size: rem-calc(14);
+  }
 
   .row {
     align-items: center;
     display: flex;
+    position: relative;
     width: 100%;
 
+    @include breakpoint(xmedium down) {
+      flex-wrap: wrap;
+      padding: rem-calc(25 175 25 35);
+    }
+
+    @include breakpoint(medium down) {
+      align-items: flex-end;
+      padding: rem-calc(25 0 85 35);
+    }
+
     .column {
-      padding: rem-calc(12 15 11);
+      padding: rem-calc(22 15 21);
       text-align: right;
-      width: 7%;
+      width: 8.5%;
 
-      &:nth-child(2) {
-        width: calc(8% - 22px);
-      }
-
-      &:nth-child(3) {
-        width: 18%;
-      }
-
-      &:nth-child(4) {
+      @include breakpoint(xmedium down) {
+        font-size: rem-calc(12);
+        padding: rem-calc(8 15 3 0);
+        text-align: left;
         width: 14%;
       }
 
-      &:nth-child(5) {
-        width: 12%;
-      }
-
-      &:nth-child(6) {
-        width: 6%;
-      }
-
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(5) {
-        text-align: left;
-      }
-
-      &:nth-child(3),
-      &:nth-child(5) {
-        line-height: 1.4;
-      }
-
-      &:nth-child(4) {
-        padding: rem-calc(12 45 11 15);
+      @include breakpoint(xxsmall down) {
+        width: 25%;
       }
 
       &:first-child {
-        padding: rem-calc(12 2 11);
-        width: rem-calc(22);
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        left: 0;
+        padding: 0;
+        width: 40.5%;
+
+        @include breakpoint(xmedium down) {
+          // padding-bottom: rem-calc(5);
+          width: 100%;
+        }
+      }
+
+      .column-item {
+        padding: rem-calc(22 15 21);
+
+        @include breakpoint(xmedium down) {
+          font-size: rem-calc(14);
+          padding: rem-calc(5 15 5 0);
+        }
+
+        &:first-child {
+          flex-basis: rem-calc(20);
+          padding: rem-calc(22 2 21);
+
+          @include breakpoint(xmedium down) {
+            left: 0;
+            margin-top: rem-calc(-10);
+            padding-bottom: 0;
+            padding-top: 0;
+            position: absolute;
+            top: 50%;
+            // top: rem-calc(25);
+          }
+        }
+
+        &:nth-child(2) {
+          min-width: rem-calc(55);
+          padding: rem-calc(22 0 21 10);
+
+          @include breakpoint(xmedium down) {
+            padding: rem-calc(5 0);
+          }
+        }
+
+        &:nth-child(3) {
+          flex-grow: 1;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          text-align: left;
+        }
+
+        &:last-child {
+          min-width: rem-calc(160);
+          padding: rem-calc(22 25 21 15);
+
+          .mobile-sort {
+            display: none;
+          }
+
+          @include breakpoint(xmedium down) {
+            bottom: auto;
+            left: auto;
+            right: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          @include breakpoint(medium down) {
+            bottom: rem-calc(25);
+            left: rem-calc(35);
+            right: auto;
+            padding: 0;
+            position: absolute;
+            top: auto;
+            transform: none;
+
+            .mobile-sort {
+              display: inline-block;
+            }
+
+            .allocation-field input {
+              text-align: left;
+            }
+
+            .allocation-field.usd input {
+              padding-left: rem-calc(20);
+            }
+          }
+
+          @include breakpoint(large up) {
+            min-width: rem-calc(170);
+          }
+        }
+      }
+
+      .mobile-sort {
+        color: $medium-gray;
+        display: none;
+        font-size: rem-calc(10);
+        font-weight: 600;
+        margin-bottom: rem-calc(2);
+
+        @include breakpoint(xmedium down) {
+          display: block;
+        }
       }
     }
   }
@@ -63,27 +195,76 @@
 
 .table-sort {
   background-color: $light-gray;
-  // border-bottom: 1px solid $gray;
   color: $black;
-  padding: rem-calc(10 0);
-
+  // font-size: rem-calc(12);
+  // padding: rem-calc(10 0);
+  // padding: rem-calc(5 0);
   position: sticky;
   top: 0;
   z-index: 2;
 
-  .row {
-    align-items: flex-start;
+  @include breakpoint(xmedium down) {
+    font-size: rem-calc(12);
+    padding: rem-calc(20 0);
   }
 
-  .column:nth-child(4) {
-    div {
-      width: 100%;
-      text-align: right;
-      .sort-text {
-        display: block;
-        margin-bottom: rem-calc(10);
+  .row {
+    align-items: flex-start;
+    padding: 0;
+
+    .column {
+      @include breakpoint(xmedium down) {
+        display: none;
       }
     }
+
+    .column:first-child {
+      justify-content: space-between;
+
+      .column-item:nth-child(3) {
+        flex-grow: 1;
+      }
+
+      @include breakpoint(xmedium down) {
+        display: flex;
+        padding: 0;
+
+        .column-item:nth-child(2) {
+          display: none;
+        }
+
+        .column-item:nth-child(3) {
+          padding: rem-calc(0 0 0 35);
+        }
+
+        .column-item:last-child {
+          bottom: auto;
+          left: auto;
+          padding: rem-calc(0 10);
+          position: relative;
+          right: auto;
+          text-align: right;
+          top: auto;
+          transform: none;
+        }
+      }
+
+      @include breakpoint(medium down) {
+        .column-item:last-child {
+          display: none;
+        }
+      }
+    }
+
+    // .column {
+    //   padding-bottom: rem-calc(15) !important;
+    //   padding-top: rem-calc(20) !important;
+    // }
+
+    // .column .column-item {
+    //   padding-bottom: 0 !important;
+    //   padding-top: 0 !important;
+    // }
   }
 }
 
@@ -98,15 +279,26 @@
   border-right: none;
   margin-top: rem-calc(-1);
   outline: none;
-  padding: rem-calc(10 0);
   transition: background-color 0.25s ease-in-out;
 
   .column {
+    color: $black;
     font-weight: 300;
-    transition: opacity 0.25s ease-in-out, padding 0.25s ease-in-out;
+    // transition: opacity 0.25s ease-in-out, padding 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+
+    &:first-child {
+      background-color: $white;
+    }
   }
 
-  .column:nth-child(2) {
+  .column-item {
+    color: $black;
+    // transition: opacity 0.25s ease-in-out, padding 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+  }
+
+  .column-item:nth-child(2) {
     color: $dark-blue;
     font-weight: 600;
     text-transform: uppercase;
@@ -115,15 +307,20 @@
   .allocation-field {
     color: $black;
     position: relative;
+    transition: opacity 0.25s ease-in-out;
 
     input {
       background-color: $light-gray;
       border-color: $light-gray;
       color: $black;
-      font-size: rem-calc(14);
+      font-size: rem-calc(12);
       padding: rem-calc(10);
       text-align: right;
       width: 100%;
+
+      @include breakpoint(large up) {
+        font-size: rem-calc(14);
+      }
 
       &:focus {
         border-color: $dark-blue;
@@ -133,16 +330,20 @@
     .usd-option {
       color: $medium-gray;
       display: none;
-      font-size: rem-calc(14);
+      font-size: rem-calc(12);
       font-weight: 400;
       left: rem-calc(10);
       position: absolute;
       top: rem-calc(11);
+
+      @include breakpoint(large up) {
+        font-size: rem-calc(14);
+      }
     }
 
     &.usd {
       input {
-        padding-left: rem-calc(40);
+        padding-left: rem-calc(15);
       }
       .usd-option {
         display: block;
@@ -152,15 +353,29 @@
 
   &.faded {
     .column {
-      opacity: 0.25;
+      // opacity: 0.25;
+      color: $gray;
     }
 
     .column:first-child {
-      opacity: 1;
-    }
-
-    .column:nth-child(2) {
+      // opacity: 1;
       color: $black;
+
+      .column-item:nth-child(2) {
+        // color: $black;
+        color: $gray;
+      }
+
+      .column-item:nth-child(2),
+      .column-item:nth-child(3),
+      .column-item:last-child {
+        // opacity: 0.25;
+        color: $gray;
+      }
+
+      .allocation-field {
+        opacity: 0.25;
+      }
     }
   }
 

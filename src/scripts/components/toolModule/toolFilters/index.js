@@ -5,6 +5,7 @@ import { inject, observer } from 'mobx-react';
 import CreditCriteriaSelector from './CreditCriteriaSelector';
 import RangeSlider from '../../ui/rangeSlider';
 import SwitchButton from '../../ui/checkBoxElements/SwitchButton';
+import SwitchBox from '../../ui/checkBoxElements/SwitchBox';
 
 const ToolFilters = inject('appStore')(
   observer(props => {
@@ -12,7 +13,9 @@ const ToolFilters = inject('appStore')(
       {
         allocationEqualWeight,
         updateAllocationEqualWeight,
-        updateCurrentYears
+        updateCurrentYears,
+        allocationPercentFormat,
+        updateAllocationPercentFormat
       } = appStore.Tool,
       allocationWeightClicked = () => {
         updateAllocationEqualWeight(!allocationEqualWeight);
@@ -24,6 +27,9 @@ const ToolFilters = inject('appStore')(
           );
 
         updateCurrentYears(newYears);
+      },
+      onAllocationFormatUpdate = () => {
+        updateAllocationPercentFormat(!allocationPercentFormat);
       };
 
     return (
@@ -37,16 +43,24 @@ const ToolFilters = inject('appStore')(
             years={years}
           />
         </div>
-        <div className="grid-x">
-          <div className="cell medium-6 allocation-option">
-            <p>Distribute your portfolio allocation by equal weight</p>
+        <div className="flex-grid">
+          <div className="column">
+            <p>Equal Weight Distribution</p>
             <SwitchButton
               isChecked={allocationEqualWeight}
               onChange={allocationWeightClicked}
-              textLabel={['On', 'Off']}
+              // textLabel={['On', 'Off']}
             />
           </div>
-          <div className="cell medium-6 as-of-date">
+          <div className="column">
+            <p>U.S. Dollar / Percentage</p>
+            <SwitchBox
+              isChecked={allocationPercentFormat}
+              onChange={onAllocationFormatUpdate}
+              textLabel={['$', '%']}
+            />
+          </div>
+          <div className="column">
             <p className="small-text">Data as of {asOfDate}</p>
           </div>
         </div>

@@ -1,15 +1,214 @@
 .expanded-container {
-  padding-bottom: rem-calc(40);
+  text-align: left;
+
+  .result-section {
+    background-color: $white;
+    padding: rem-calc(10 0);
+
+    @include breakpoint(medium up) {
+      padding: rem-calc(10 0 100);
+    }
+  }
+
+  .calculator-section {
+    padding: rem-calc(100 0 80);
+  }
+
+  h4 {
+    text-align: left;
+  }
+
+  h5 {
+    margin-bottom: rem-calc(20);
+  }
+
+  .flex-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .result-top,
+  .result-content {
+    color: $dark-blue;
+    // padding: rem-calc(60 0 120);
+  }
+
+  .result-top {
+    border-bottom: 1px solid $gray;
+    flex-wrap: wrap;
+    padding: rem-calc(220 0 50);
+
+    .column {
+      &:first-child {
+        flex-basis: 100%;
+
+        @include breakpoint(xxsmall up) {
+          flex-basis: auto;
+          flex-grow: 1;
+        }
+      }
+
+      &:last-child {
+        flex-basis: 100%;
+        padding-top: rem-calc(20);
+
+        @include breakpoint(xxsmall up) {
+          flex-basis: auto;
+          padding-top: 0;
+        }
+      }
+
+      @include breakpoint(xxsmall up) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+      padding-right: rem-calc(40);
+    }
+
+    .rect-btn {
+      margin: 0;
+      max-width: rem-calc(180);
+      min-width: rem-calc(160);
+
+      @include breakpoint(xxmedium up) {
+        max-width: rem-calc(220);
+        min-width: rem-calc(220);
+      }
+    }
+  }
+
+  .result-content {
+    align-items: flex-start;
+    font-weight: 400;
+    flex-wrap: wrap;
+    padding: rem-calc(40 0 20);
+    position: relative;
+
+    @include breakpoint(xxsmall up) {
+      padding: rem-calc(60 0 40);
+    }
+
+    .column {
+      // color: rgba($dark-blue, 0.5);
+      color: $medium-gray;
+      display: flex;
+      flex: 1;
+      flex-basis: 50%;
+      flex-direction: column;
+      font-size: rem-calc(16);
+      margin-bottom: rem-calc(30);
+
+      @include breakpoint(medium up) {
+        flex-basis: 25%;
+      }
+
+      @include breakpoint(xmedium up) {
+        font-size: rem-calc(18);
+      }
+    }
+
+    .value {
+      color: $black;
+      display: block;
+      font-size: rem-calc(21);
+      margin: rem-calc(5 0);
+    }
+  }
+
+  .result-chart {
+    // background-color: $light-gray;
+    border: 1px solid $gray;
+    padding: rem-calc(30 0);
+    position: relative;
+
+    .as-of-date {
+      color: $dark-gray;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: rem-calc(20);
+      top: rem-calc(20);
+    }
+  }
 
   .chart {
-    padding: rem-calc(50 0);
-    // width: 50%;
+    // padding: rem-calc(60 0);
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: rem-calc(800);
+    margin: 0 auto;
+    padding: rem-calc(20 0);
 
-    .highcharts-container {
-      width: 100% !important;
+    & > div {
+      flex-basis: 50%;
+
+      .highcharts-container {
+        @include breakpoint(small down) {
+          height: rem-calc(300) !important;
+          width: rem-calc(300) !important;
+        }
+      }
 
       svg {
-        width: 100% !important;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    & > ul {
+      flex-basis: 80%;
+
+      @include breakpoint(medium up) {
+        flex-basis: 50%;
+      }
+    }
+
+    // .highcharts-container {
+    // width: 100% !important;
+
+    // svg {
+    //   width: 100% !important;
+    // }
+    // }
+
+    .legend-items {
+      max-width: rem-calc(380);
+      padding: rem-calc(30 20 20);
+
+      @include breakpoint(825 up) {
+        padding: rem-calc(0 40);
+      }
+
+      .legend-symbol {
+        border-radius: rem-calc(6);
+        height: rem-calc(12);
+        left: 0;
+        margin-top: rem-calc(-6);
+        position: absolute;
+        top: 50%;
+        width: rem-calc(12);
+      }
+
+      .value {
+        float: right;
+      }
+
+      li {
+        border: 1px solid $gray;
+        border-left: none;
+        border-right: none;
+        font-size: rem-calc(14);
+        font-weight: 400;
+        margin-top: rem-calc(-1);
+        padding: rem-calc(12 0 12 20);
+        position: relative;
       }
     }
   }
@@ -18,6 +217,13 @@
     display: block;
     margin: rem-calc(40) auto rem-calc(50);
     width: 42%;
+  }
+
+  .rect-btn {
+    align-self: center;
+    // margin-left: rem-calc(15);
+    min-width: rem-calc(200);
+    width: rem-calc(280);
   }
 
   .net-acquisition-yield-calculator {
@@ -59,20 +265,13 @@
         }
 
         .nav,
-        .share-purchase-price,
-        .rect-btn {
+        .share-purchase-price {
           align-self: center;
         }
 
         .share-purchase-price {
           line-height: rem-calc(26);
           width: rem-calc(300);
-        }
-
-        .rect-btn {
-          margin-left: rem-calc(15);
-          min-width: rem-calc(180);
-          width: rem-calc(180);
         }
       }
     }

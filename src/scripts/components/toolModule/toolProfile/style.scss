@@ -1,11 +1,15 @@
 .sub-head {
   background-color: $dark-blue;
   // opacity: 0;
-  // padding: rem-calc(48 0 34);
+  padding: rem-calc(23 0 19);
   // padding: rem-calc(32 0 18);
-  padding: rem-calc(20 0 16);
+  // padding: rem-calc(20 0 16);
   transform: translateY(-101%);
-  transition: transform 0.5s cubic-bezier(0.75, 0, 0.25, 1);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+
+  @include breakpoint(xxmedium up) {
+    padding: rem-calc(38 0 34);
+  }
 
   .eyebrow {
     color: rgba(255, 255, 255, 0.5);
@@ -13,16 +17,25 @@
     margin-bottom: rem-calc(4);
     text-transform: uppercase;
   }
+
+  .grid-container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint(xsmall up) {
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .download-report {
-  display: table;
-  padding: rem-calc(0 0 0 80);
+  // padding: rem-calc(0 0 0 40);
+  display: none;
 
-  a {
-    display: table-cell;
-    float: right;
-    vertical-align: middle;
+  @include breakpoint(medium up) {
+    display: block;
   }
 }
 
@@ -40,10 +53,10 @@
     font-size: rem-calc(24);
     font-weight: 300;
     height: auto;
-    line-height: 1.1;
-    margin-left: rem-calc(-14);
+    line-height: 1.4;
+    margin-left: rem-calc(-8);
     max-width: none;
-    padding: rem-calc(3 14 2);
+    padding: rem-calc(3 8 2);
     transition: background-color 0.25s ease-in-out;
 
     &:hover,
@@ -51,9 +64,10 @@
       background-color: rgba($blue, 0.25);
     }
 
-    @include breakpoint(medium up) {
+    @include breakpoint(xxmedium up) {
       font-size: rem-calc(36);
-      line-height: 1.4;
+      margin-left: rem-calc(-14);
+      padding: rem-calc(3 14 2);
     }
   }
 
@@ -69,7 +83,11 @@
   .is-focus {
     input[type='text'],
     input[type='number'] {
-      padding: rem-calc(3 14 2);
+      padding: rem-calc(3 8 2);
+
+      @include breakpoint(xxmedium up) {
+        padding: rem-calc(3 14 2);
+      }
     }
   }
 
@@ -80,9 +98,48 @@
     opacity: 0;
     pointer-events: none;
     position: absolute;
+    white-space: nowrap;
 
-    @include breakpoint(medium up) {
+    @include breakpoint(xxmedium up) {
       font-size: rem-calc(36);
     }
+  }
+}
+
+.ladder-name {
+  padding: rem-calc(4 0 10 0);
+  width: 100%;
+
+  @include breakpoint(xsmall up) {
+    padding: rem-calc(6 20 0 0);
+    width: calc(50% + 30px);
+  }
+
+  @include breakpoint(medium up) {
+    width: calc(53% - 75px);
+  }
+
+  @include breakpoint(xxmedium up) {
+    padding: rem-calc(8 40 0 0);
+    width: calc(55% - 100px);
+  }
+}
+
+.investment-input {
+  padding: rem-calc(4 0 0 0);
+  width: 100%;
+
+  @include breakpoint(xsmall up) {
+    padding: rem-calc(6 0 0 0);
+    width: calc(50% - 30px);
+  }
+
+  @include breakpoint(medium up) {
+    width: calc(47% - 75px);
+  }
+
+  @include breakpoint(xxmedium up) {
+    padding: rem-calc(8 40 0 0);
+    width: calc(45% - 100px);
   }
 }

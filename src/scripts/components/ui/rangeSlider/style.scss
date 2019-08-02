@@ -1,7 +1,15 @@
 #range-slider {
   // margin: rem-calc(20 6 0);
-  margin: rem-calc(20 14 0);
+  margin: rem-calc(14 14 0);
   position: relative;
+
+  @include breakpoint(medium up) {
+    margin: rem-calc(45 14 0);
+  }
+
+  @include breakpoint(xxmedium up) {
+    margin: rem-calc(20 14 0);
+  }
 
   .timeline {
     @extend %no-style;
@@ -18,10 +26,28 @@
       width: rem-calc(1);
 
       p {
-        font-size: rem-calc(12);
+        font-size: rem-calc(10);
         margin: 0;
-        margin-left: rem-calc(-15);
-        padding-top: rem-calc(16);
+        margin-left: rem-calc(-12);
+        padding-top: rem-calc(12);
+
+        @include breakpoint(xsmall up) {
+          font-size: rem-calc(12);
+          margin-left: rem-calc(-15);
+          padding-top: rem-calc(16);
+        }
+
+        @include breakpoint(medium up) {
+          font-size: rem-calc(10);
+          margin-left: rem-calc(-12);
+          padding-top: rem-calc(12);
+        }
+
+        @include breakpoint(xmedium up) {
+          font-size: rem-calc(12);
+          margin-left: rem-calc(-15);
+          padding-top: rem-calc(16);
+        }
       }
 
       &.on {

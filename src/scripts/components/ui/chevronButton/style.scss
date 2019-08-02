@@ -205,4 +205,13 @@
       background-color: $mint;
     }
   }
+
+  &.white {
+    color: $white;
+
+    span:before,
+    span:after {
+      background-color: $white;
+    }
+  }
 }

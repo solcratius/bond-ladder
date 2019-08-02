@@ -34,26 +34,25 @@ class App extends Component {
     axios.get(jsonPath).then(res => {
       const json = res.data,
         catKeys = Object.keys(json.tickers),
-        rawData = catKeys
-          .map(cat => {
-            const items = json.tickers[cat].map(item => {
-              const catName = cat
-                  .replace(/([A-Z])/g, ' $1')
-                  .replace(/^./, str => {
-                    return str.toUpperCase();
-                  }),
-                newItem = {
-                  ...item,
-                  criteria:
-                    catName === 'Emerging' ? `${catName} Markets Debt` : catName
-                };
-              return newItem;
-            });
-            return items;
-          })
-          .flat();
+        rawData = catKeys.map(cat => {
+          const items = json.tickers[cat].map(item => {
+            const catName = cat
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, str => {
+                  return str.toUpperCase();
+                }),
+              newItem = {
+                ...item,
+                criteria:
+                  catName === 'Emerging' ? `${catName} Markets Debt` : catName
+              };
+            return newItem;
+          });
+          return items;
+        }),
+        flatRaw = [].concat(...rawData);
 
-      currentProductsInit(rawData);
+      currentProductsInit(flatRaw);
       setAsOfDate(json.asOfDate);
 
       this.setState({
@@ -70,7 +69,8 @@ class App extends Component {
       () => {
         setTimeout(() => {
           this.props.appStore.Tool.updateAppState('Tools');
-        }, 750);
+          // }, 750);
+        }, 250);
       }
     );
   };
@@ -95,6 +95,7 @@ class App extends Component {
       { appState } = this.props.appStore.Tool,
       dataContent = loadedData ? (
         <div className="main-container">
+          <div className="bg-asset" />
           <IntroModule
             onStartClick={this.onStartClick}
             resetAll={this.resetAll}
@@ -111,28 +112,30 @@ class App extends Component {
       );
 
     return (
-      <div
-        className={`main-bg${transitioning ? ' transition' : ''}${
-          appState === 'Tools' ? ' tool' : ''
-        }`}
-      >
-        <Header name="BulletShares ETF Bond Ladder Tool" />
-        {dataContent}
-        <div className="grid-container bottom-contents">
-          <Methodology />
-          <ImportantInfo />
+      <div>
+        <div
+          className={`main-bg${transitioning ? ' transition' : ''}${
+            appState === 'Tools' ? ' tool' : ''
+          }`}
+        >
+          <Header name="BulletShares ETF Bond Ladder Tool" />
+          {dataContent}
+          <div className="grid-container bottom-contents">
+            <Methodology />
+            <ImportantInfo />
+          </div>
+          <Footer>
+            <Link to="./">Prospectus</Link>
+            <Link to="./">Program Description</Link>
+            <Link to="./">Security</Link>
+            <Link to="./">Careers</Link>
+            <Link to="./">Terms of Use</Link>
+            <Link to="./">Privacy</Link>
+            <Link to="./">Legal</Link>
+            <Link to="./">Money Market Holdings</Link>
+            <Link to="./">FINRA BrokerCheck</Link>
+          </Footer>
         </div>
-        <Footer>
-          <Link to="./">Prospectus</Link>
-          <Link to="./">Program Description</Link>
-          <Link to="./">Security</Link>
-          <Link to="./">Careers</Link>
-          <Link to="./">Terms of Use</Link>
-          <Link to="./">Privacy</Link>
-          <Link to="./">Legal</Link>
-          <Link to="./">Money Market Holdings</Link>
-          <Link to="./">FINRA BrokerCheck</Link>
-        </Footer>
       </div>
     );
   }

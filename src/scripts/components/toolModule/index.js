@@ -62,7 +62,6 @@ class ToolModule extends Component {
       setTimeout(this.endResize, this.delta);
     } else {
       this.timeout = false;
-
       const curHeight = WindowSize.getHeight();
 
       this.setState(
@@ -72,11 +71,11 @@ class ToolModule extends Component {
         () => {
           HTML.classList.remove('no-anim');
 
-          if (curHeight >= 700) {
-            HTML.classList.remove('short');
-          } else {
-            HTML.classList.add('short');
-          }
+          // if (curHeight >= 700) {
+          //   HTML.classList.remove('short');
+          // } else {
+          //   HTML.classList.add('short');
+          // }
         }
       );
     }
@@ -95,15 +94,15 @@ class ToolModule extends Component {
         asOfDate,
         currentProductResults,
         currentProducts,
-        currentYears,
-        productTotal
+        productTotal,
+        selectedYears
       } = appStore.Product,
-      { allocationPercentFormat } = appStore.Tool,
+      { allocationPercentFormat, updateDownloadState } = appStore.Tool,
       { investment, updateInvestment } = appStore.User;
 
     return (
       <section className={`tool-module${showTool ? ' show' : ''}`}>
-        <ToolProfile />
+        <ToolProfile tableBottomY={tableBottomY} />
         <div className="component">
           <div className="grid-container">
             <div className="grid-x">
@@ -130,12 +129,14 @@ class ToolModule extends Component {
           <ToolResults
             appState={appState}
             allocationPercentFormat={allocationPercentFormat}
-            yearRange={currentYears}
+            yearRange={selectedYears}
             totalInvestment={investment}
             productTotal={productTotal}
             resultsValue={currentProductResults}
             tableBottomY={tableBottomY}
+            updateDownloadState={updateDownloadState}
             updateInvestment={updateInvestment}
+            winHeight={winHeight}
           />
         </div>
       </section>

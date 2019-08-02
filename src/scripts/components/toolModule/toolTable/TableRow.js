@@ -91,7 +91,7 @@ class TableRow extends Component {
         ticker,
         url,
         name,
-        criteria,
+        // criteria,
         maturityDate,
         yieldToMaturity,
         yieldToWorst,
@@ -108,42 +108,64 @@ class TableRow extends Component {
     return (
       <div className={`row${selected ? '' : ' faded'}${show ? '' : ' hide'}`}>
         <div className="column">
-          <CheckBox
-            id="0"
-            isChecked={selected}
-            name="productSelect"
-            onChange={this.onProductSelectUpdate}
-          />
-        </div>
-        <div className="column">
-          <Link to={url}>{ticker}</Link>
-        </div>
-        <div className="column">
-          <Link to={url}>{name}</Link>
-        </div>
-        <div className="column">
-          <div
-            className={`allocation-field${
-              !allocationPercentFormat ? ' usd' : ''
-            }`}
-          >
-            <ValueInput
-              onUpdateDone={this.onAllocationChange}
-              value={this.formatValue(allocation)}
+          <div className="column-item">
+            <CheckBox
+              id="0"
+              isChecked={selected}
+              name="productSelect"
+              onChange={this.onProductSelectUpdate}
             />
-            <span className="usd-option">$</span>
+          </div>
+          <div className="column-item">
+            <Link to={url}>{ticker}</Link>
+          </div>
+          <div className="column-item">
+            <Link to={url}>{name}</Link>
+          </div>
+          <div className="column-item">
+            <span className="mobile-sort">Allocation</span>
+            <div
+              className={`allocation-field${
+                !allocationPercentFormat ? ' usd' : ''
+              }`}
+            >
+              <ValueInput
+                onUpdateDone={this.onAllocationChange}
+                value={this.formatValue(allocation)}
+              />
+              <span className="usd-option">$</span>
+            </div>
           </div>
         </div>
-        <div className="column">{criteria}</div>
-        <div className="column">{maturityDate}</div>
-        <div className="column">{numberFormat(yieldToMaturity)}</div>
-        <div className="column">{numberFormat(yieldToWorst)}</div>
-        <div className="column">{numberFormat(effectiveDuration)}</div>
-        <div className="column">{numberFormat(monthSecYield)}</div>
+        {/* <div className="column">{criteria}</div> */}
         <div className="column">
+          <span className="mobile-sort">Maturity Year</span>
+          {maturityDate}
+        </div>
+        <div className="column">
+          <span className="mobile-sort">Yield to Maturity</span>
+          {numberFormat(yieldToMaturity)}
+        </div>
+        <div className="column">
+          <span className="mobile-sort">Yield to Worst</span>
+          {numberFormat(yieldToWorst)}
+        </div>
+        <div className="column">
+          <span className="mobile-sort">Effective Duration</span>
+          {numberFormat(effectiveDuration)}
+        </div>
+        <div className="column">
+          <span className="mobile-sort">30-Day SEC Yield</span>
+          {numberFormat(monthSecYield)}
+        </div>
+        <div className="column">
+          <span className="mobile-sort">Distribution Rate</span>
           {distributionRate === null ? 'N/A' : numberFormat(distributionRate)}
         </div>
-        <div className="column">{numberFormat(numberOfHoldings, '', true)}</div>
+        <div className="column">
+          <span className="mobile-sort"># of Holdings</span>
+          {numberFormat(numberOfHoldings, '', true)}
+        </div>
       </div>
     );
   }

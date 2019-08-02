@@ -8,7 +8,9 @@ const SwitchButton = props => {
     <label className="switch-btn">
       <input type="checkbox" checked={isChecked} onChange={onChange} />
       <span className="sliding-checkbox" />
-      <span className="text">{!isChecked ? textLabel[1] : textLabel[0]}</span>
+      {textLabel ? (
+        <span className="text">{!isChecked ? textLabel[1] : textLabel[0]}</span>
+      ) : null}
     </label>
   );
 };

@@ -2,7 +2,7 @@
   "tickers": {
     "municipalFixedIncome": [
       {
-        "ticker": "BMCL",
+        "ticker": "JSOL",
         "maturityDate": 1640930400000,
         "yieldToMaturity": "2.491",
         "yieldToWorse": "2.459",
@@ -10,7 +10,7 @@
         "distYield": 2.705,
         "effectiveDuration": "1.778",
         "numOfHoldings": 402,
-        "fundName": "Invesco BulletShares 2021 Corporate Bond ETF",
+        "fundName": "Invesco BulletShares 2021 Municipal Fixed Income Bond ETF",
         "productId": "6492968A729F06ABE0531A6FD60A34E3",
         "asOfDate": 1562302800000,
         "nav": "21.13185348",
@@ -91,7 +91,7 @@
         }
       },
       {
-        "ticker": "BMCJ",
+        "ticker": "DMOL",
         "maturityDate": 1577772000000,
         "yieldToMaturity": "2.45",
         "yieldToWorse": "2.428",
@@ -99,7 +99,7 @@
         "distYield": 2.3227,
         "effectiveDuration": "0.217",
         "numOfHoldings": 134,
-        "fundName": "Invesco BulletShares 2019 Corporate Bond ETF",
+        "fundName": "Invesco BulletShares 2019 Municipal Fixed Income Bond ETF",
         "productId": "6492968A729D06ABE0531A6FD60A34E3",
         "asOfDate": 1562302800000,
         "nav": "21.1109768",
@@ -180,7 +180,7 @@
         }
       },
       {
-        "ticker": "BMCK",
+        "ticker": "DWAN",
         "maturityDate": 1609394400000,
         "yieldToMaturity": "2.46",
         "yieldToWorse": "2.411",
@@ -188,7 +188,7 @@
         "distYield": 2.5005,
         "effectiveDuration": "0.907",
         "numOfHoldings": 374,
-        "fundName": "Invesco BulletShares 2020 Corporate Bond ETF",
+        "fundName": "Invesco BulletShares 2020 Municipal Fixed Income Bond ETF",
         "productId": "6492968A729E06ABE0531A6FD60A34E3",
         "asOfDate": 1562302800000,
         "nav": "21.25437278",
@@ -269,7 +269,7 @@
         }
       },
       {
-        "ticker": "BMCM",
+        "ticker": "MSOK",
         "maturityDate": 1672466400000,
         "yieldToMaturity": "2.505",
         "yieldToWorse": "2.485",
@@ -277,7 +277,7 @@
         "distYield": 2.8524,
         "effectiveDuration": "2.687",
         "numOfHoldings": 385,
-        "fundName": "Invesco BulletShares 2022 Corporate Bond ETF",
+        "fundName": "Invesco BulletShares 2022 Municipal Fixed Income Bond ETF",
         "productId": "6492968A72A006ABE0531A6FD60A34E3",
         "asOfDate": 1562302800000,
         "nav": "21.3017229",
@@ -355,6 +355,95 @@
           "c": "0%",
           "d": "0%",
           "nr": "1%"
+        }
+      },
+      {
+        "ticker": "LPIM",
+        "maturityDate": 1704002400000,
+        "yieldToMaturity": "2.601",
+        "yieldToWorse": "2.579",
+        "secYield": 2.5251,
+        "distYield": 3.008,
+        "effectiveDuration": "3.499",
+        "numOfHoldings": 319,
+        "fundName": "Invesco BulletShares 2023 Municipal Fixed Income Bond ETF",
+        "productId": "6492968A72A106ABE0531A6FD60A34E3",
+        "asOfDate": 1562302800000,
+        "nav": "21.06142897",
+        "sectorAllocations": [
+          {
+            "asOfDate": 1562562000000,
+            "name": "Financials",
+            "value": 30.184543
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Health Care",
+            "value": 11.986532
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Energy",
+            "value": 10.05476
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Information Technology",
+            "value": 9.015391
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Discretionary",
+            "value": 8.515255
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Consumer Staples",
+            "value": 8.208261
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Industrials",
+            "value": 7.424843
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Real Estate",
+            "value": 4.708537
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Communication Services",
+            "value": 4.590097
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Utilities",
+            "value": 3.19835
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Materials",
+            "value": 1.258678
+          },
+          {
+            "asOfDate": 1562562000000,
+            "name": "Telecommunication Services",
+            "value": 0.854755
+          }
+        ],
+        "creditQuality": {
+          "aaa": "2%",
+          "aa": "13%",
+          "a": "34%",
+          "bbb": "49%",
+          "bb": "2%",
+          "b": "0%",
+          "ccc": "0%",
+          "cc": "0%",
+          "c": "0%",
+          "d": "0%",
+          "nr": "0%"
         }
       }
     ],

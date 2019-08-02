@@ -1,18 +1,30 @@
 .large-checkbox {
+  align-items: center;
   background-color: $white;
   border: 2px solid $gray;
   border-radius: rem-calc(4);
   color: $black;
-  display: table;
-  float: left;
+  display: inherit;
   font-size: rem-calc(14);
+  justify-content: center;
   line-height: 1.2;
-  margin-right: rem-calc(15);
+  margin-right: rem-calc(10);
+  margin-bottom: rem-calc(10);
   min-height: rem-calc(50);
-  min-width: rem-calc(130);
+  min-width: rem-calc(120);
   text-align: center;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  width: calc(25% - 15px);
+  width: calc(50% - 10px);
+
+  // @include breakpoint(xxmedium up) {
+  //   margin-right: rem-calc(10);
+  //   width: calc(25% - 10px);
+  // }
+  @include breakpoint(xxmedium up) {
+    margin-bottom: 0;
+    margin-right: rem-calc(15);
+    width: calc(25% - 15px);
+  }
 
   &.checked,
   &.checked:hover {
@@ -23,11 +35,10 @@
 
   label {
     cursor: pointer;
-    display: table-cell;
     // padding: rem-calc(7 30 7 9);
     padding: rem-calc(7 10);
     position: relative;
-    vertical-align: middle;
+    text-align: center;
   }
 
   input[type='checkbox'] {

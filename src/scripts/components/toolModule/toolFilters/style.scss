@@ -1,32 +1,105 @@
 .toggler {
-  padding: rem-calc(10 0 35);
-  padding: 0;
+  padding: rem-calc(20 0 30);
+
+  @include breakpoint(xsmall up) {
+    padding: rem-calc(10 0 30);
+  }
+
+  @include breakpoint(medium up) {
+    padding: rem-calc(15 0 35);
+  }
+
+  @include breakpoint(xxmedium up) {
+    padding: rem-calc(10 0 35);
+  }
 
   .instruction-title {
     margin-left: 0;
   }
 
   & > div {
-    position: relative;
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint(xxmedium up) {
+      flex-wrap: nowrap;
+    }
   }
 }
 
 .slider {
-  padding: rem-calc(10 0 35 80);
-}
+  padding: rem-calc(10 0 35);
 
-.allocation-option {
-  padding: rem-calc(25 0 0);
+  @include breakpoint(medium up) {
+    padding: rem-calc(15 0 35 30);
+  }
 
-  p {
-    display: inline-block;
+  @include breakpoint(xxmedium up) {
+    padding: rem-calc(10 0 35 80);
+  }
+
+  .instruction-title {
+    @include breakpoint(xxsmall down) {
+      margin-left: 0;
+    }
   }
 }
 
-.as-of-date {
-  padding: rem-calc(25 0 0 80);
+.flex-grid {
+  align-items: flex-end;
+  flex-wrap: wrap;
 
-  p {
-    text-align: right;
+  @include breakpoint(medium up) {
+    flex-wrap: nowrap;
+  }
+
+  .column {
+    flex-basis: auto;
+    padding-top: 0;
+
+    @include breakpoint(xxmedium up) {
+      padding-top: rem-calc(25);
+    }
+
+    p {
+      display: inline-block;
+    }
+
+    &:first-child {
+      flex-basis: 100%;
+      padding-top: rem-calc(20);
+
+      @include breakpoint(medium up) {
+        flex-basis: auto;
+        padding-top: 0;
+      }
+
+      @include breakpoint(xxmedium up) {
+        padding-top: rem-calc(25);
+      }
+    }
+
+    &:last-child {
+      flex-basis: 100%;
+      flex-grow: 1;
+      padding-top: rem-calc(30);
+
+      @include breakpoint(xsmall up) {
+        flex-basis: auto;
+        padding-top: 0;
+      }
+
+      p {
+        display: block;
+        text-align: left;
+
+        @include breakpoint(xsmall up) {
+          text-align: right;
+        }
+      }
+    }
   }
 }

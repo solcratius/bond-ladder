@@ -1,4 +1,5 @@
 import './style.scss';
+import WindowSizeListener from 'react-window-size-listener';
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import TableSort from './TableSort';
@@ -11,7 +12,7 @@ class ToolTable extends Component {
     super();
 
     this.tableRow = React.createRef();
-    this.tableRowHeight = 74;
+    this.tableRowHeight = 0;
     this.tableTop = 0;
   }
 
@@ -21,26 +22,21 @@ class ToolTable extends Component {
       prevProp.currentItems !== this.props.currentItems ||
       prevProp.winHeight !== this.props.winHeight
     ) {
-      const tableRow = this.tableRow.current;
-
-      // this.tableRowHeight = tableRow.getBoundingClientRect().height;
-      this.tableTop = tableRow.offsetTop;
-
-      this.props.updateTableBottomY(
-        this.tableRowHeight * this.props.appStore.Product.productTotal +
-          this.tableTop
-      );
+      setTimeout(() => {
+        this.updateTableBottomY();
+      }, 50);
+      // this.updateTableBottomY();
     }
   }
 
-  onAllocationFormatUpdate = () => {
-    const {
-      allocationPercentFormat,
-      updateAllocationPercentFormat
-    } = this.props.appStore.Tool;
+  updateTableBottomY() {
+    const tableRow = this.tableRow.current;
+    this.tableRowHeight = tableRow.getBoundingClientRect().height;
+    this.tableTop = tableRow.offsetTop;
 
-    updateAllocationPercentFormat(!allocationPercentFormat);
-  };
+    this.props.updateTableBottomY(this.tableRowHeight + this.tableTop + 71);
+    tableRow.style.minHeight = `calc(100vh - ${this.tableTop + 81}px)`;
+  }
 
   render() {
     const { currentItems, appStore } = this.props,
@@ -57,19 +53,19 @@ class ToolTable extends Component {
       });
 
     return (
-      <div className="product-table">
+      <div className="product-table" ref={this.tableRow}>
+        {/* <div className="scrollable-table"> */}
+        <WindowSizeListener onResize={() => this.updateTableBottomY()} />
         <div className="table-sort">
-          <TableSort
-            allocationPercentFormat={allocationPercentFormat}
-            onAllocationFormatUpdate={this.onAllocationFormatUpdate}
-          />
+          <TableSort />
         </div>
-        <div className="table-value" ref={this.tableRow}>
+        <div className="table-value">
           {rows}
           {/* <div
             className={`preloader${this.props.appStore.preload ? ' on' : ''}`}
           /> */}
         </div>
+        {/* </div> */}
       </div>
     );
   }

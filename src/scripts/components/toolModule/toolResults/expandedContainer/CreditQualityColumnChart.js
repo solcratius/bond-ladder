@@ -6,16 +6,18 @@ import { cleanNumber } from '../../../helper/formatting';
 const CreditQualityColumnChart = inject('appStore')(
   observer(({ appStore }) => {
     const { creditQualityKeys } = appStore.Common,
+      { investment } = appStore.User,
       productsCreditQuality = appStore.Product.currentProducts
         .filter(product => {
           return product.selected && product.show;
         })
         .map(product => {
-          return [product.allocation, product.creditQuality];
+          const allocation = product.allocation / investment;
+          return [allocation, product.creditQuality];
         }),
       creditQualityValues = creditQualityKeys.map(key => {
         return productsCreditQuality.reduce((prev, cur) => {
-          return prev + cur[0] * 0.01 * cleanNumber(cur[1][key]);
+          return prev + cur[0] * cleanNumber(cur[1][key]);
         }, 0);
       }),
       creditQualityData = creditQualityValues.map((value, i) => {
@@ -24,11 +26,12 @@ const CreditQualityColumnChart = inject('appStore')(
       }),
       chartConfig = {
         chart: {
-          type: 'column',
-          backgroundColor: 'transparent'
+          backgroundColor: 'transparent',
+          height: 300,
+          type: 'column'
         },
         title: {
-          text: 'Credit Quality Allocations'
+          text: ''
         },
         subtitle: {
           text: ''
@@ -38,10 +41,13 @@ const CreditQualityColumnChart = inject('appStore')(
           labels: {
             // rotation: -45,
             style: {
-              fontSize: '12px',
+              fontSize: '13px',
               fontFamily: 'InvescoInterstate, Verdana, sans-serif'
-            }
+            },
+            y: 30
           },
+          lineColor: '#cfcfcf',
+          lineWidth: 1,
           minorTickLength: 0,
           tickLength: 0
         },
@@ -81,6 +87,20 @@ const CreditQualityColumnChart = inject('appStore')(
           series: {
             animation: {
               duration: 1000
+            },
+            dataLabels: {
+              // align: 'center',
+              enabled: true,
+              crop: false,
+              overflow: 'none',
+              format: '{point.y:,.2f}%',
+              style: {
+                color: '#001a7a',
+                fontFamily: 'InvescoInterstate, Verdana, sans-serif',
+                fontSize: '14px',
+                fontWeight: '600'
+              },
+              x: 10
             }
           }
         },
@@ -88,9 +108,9 @@ const CreditQualityColumnChart = inject('appStore')(
           enabled: false
         }
       };
-
     return (
       <div className="chart">
+        <h4>Credit Quality Allocations</h4>
         <ReactHighcharts config={chartConfig} />
       </div>
     );

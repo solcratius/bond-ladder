@@ -41,8 +41,8 @@ export const UserAgent = {
     Window resize listener module
  */
 
-let curWidth = 0,
-  curHeight = 0;
+// let curWidth = 0,
+//   curHeight = 0;
 //   time = null,
 //   timeout = false;
 
@@ -54,8 +54,8 @@ let curWidth = 0,
 //     HTML.classList.add('short');
 //   }
 // },
-const findWinW = () => Math.max(HTML.clientWidth, window.innerWidth || 0),
-  findWinH = () => Math.max(HTML.clientHeight, window.innerHeight || 0);
+// const findWinW = () => Math.max(HTML.clientWidth, window.innerWidth || 0),
+//   findWinH = () => Math.max(HTML.clientHeight, window.innerHeight || 0);
 // endResize = () => {
 //   if (new Date() - time < delta) {
 //     setTimeout(endResize, delta);
@@ -81,19 +81,21 @@ const findWinW = () => Math.max(HTML.clientWidth, window.innerWidth || 0),
 // };
 
 export const WindowSize = {
-  init: () => {
-    curWidth = findWinW();
-    curHeight = findWinH();
-
-    // if (!UserAgent.isTouch) {
-    //   window.addEventListener('resize', startResize);
-    // } else {
-    //   window.addEventListener('orientationchange', startResize);
-    // }
-  },
-  getWidth: () => curWidth,
-  getHeight: () => curHeight,
-  getSize: () => [curWidth, curHeight]
+  // init: () => {
+  // curWidth = findWinW();
+  // curHeight = findWinH();
+  // if (!UserAgent.isTouch) {
+  //   window.addEventListener('resize', startResize);
+  // } else {
+  //   window.addEventListener('orientationchange', startResize);
+  // }
+  // },
+  // getWidth: () => curWidth,
+  // getHeight: () => curHeight,
+  // getSize: () => [curWidth, curHeight]
+  getWidth: () => Math.max(HTML.clientWidth, window.innerWidth || 0),
+  getHeight: () => Math.max(HTML.clientHeight, window.innerHeight || 0),
+  getSize: () => [this.getWidth(), this.getHeight()]
 };
 
 /*

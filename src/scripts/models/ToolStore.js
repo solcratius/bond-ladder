@@ -12,6 +12,8 @@ class ToolStore {
 
   @observable preload = false;
 
+  @observable downloadState = false;
+
   @action.bound
   resetTool() {
     Product.currentProducts = Product.feededData;
@@ -23,6 +25,11 @@ class ToolStore {
   @action.bound
   updateAppState(value) {
     this.appState = value;
+  }
+
+  @action.bound
+  updateDownloadState(value) {
+    this.downloadState = value;
   }
 
   @action.bound

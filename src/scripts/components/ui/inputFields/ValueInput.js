@@ -1,4 +1,5 @@
 import './style.scss';
+import WindowSizeListener from 'react-window-size-listener';
 import React, { Component } from 'react';
 import { Link } from '@reach/router';
 
@@ -95,10 +96,11 @@ export default class ValueInput extends Component {
 
   updateFlexibleInput = () => {
     const textField = this.myTextField.current,
-      helperField = this.myHelperField.current;
+      helperField = this.myHelperField.current,
+      offSetNum = window.innerWidth >= 1024 ? 52 : 40;
 
     // textField.style.width = `${helperField.scrollWidth + 58}px`;
-    textField.style.width = `${helperField.scrollWidth + 52}px`;
+    textField.style.width = `${helperField.scrollWidth + offSetNum}px`;
   };
 
   forceFocus = event => {
@@ -108,12 +110,28 @@ export default class ValueInput extends Component {
     textField.focus();
   };
 
+  resetFlexibleInput = size => {
+    const textField = this.myTextField.current,
+      helperField = this.myHelperField.current,
+      offSetNum = size >= 1024 ? 52 : 40;
+
+    textField.removeAttribute('style');
+
+    // textField.style.width = `${helperField.scrollWidth + 58}px`;
+    textField.style.width = `${helperField.scrollWidth + offSetNum}px`;
+  };
+
   render() {
     const { className, flexibleInput, name } = this.props,
       { isFocus, placeHolder, value } = this.state;
 
     return flexibleInput ? (
       <div className={`flexible-box${isFocus ? ' is-focus' : ''}`}>
+        <WindowSizeListener
+          onResize={windowSize => {
+            this.resetFlexibleInput(windowSize.windowWidth);
+          }}
+        />
         <input
           autoComplete="off"
           className={className || ''}

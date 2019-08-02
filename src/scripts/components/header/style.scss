@@ -4,6 +4,16 @@ header {
   position: relative;
   z-index: 10;
 
+  .grid-container {
+    padding-left: rem-calc(10) !important;
+    padding-right: rem-calc(15) !important;
+
+    @include breakpoint(medium up) {
+      padding-left: rem-calc(15) !important;
+      padding-right: rem-calc(15) !important;
+    }
+  }
+
   .nav-strip {
     align-items: center;
     display: flex;
@@ -56,7 +66,16 @@ header {
   }
 
   nav {
-    margin-right: rem-calc(-13);
+    display: none;
+    margin-right: rem-calc(-5);
+
+    @include breakpoint(xsmall up) {
+      display: flex;
+    }
+
+    @include breakpoint(xlarge up) {
+      margin-right: rem-calc(-13);
+    }
 
     ul {
       @extend %no-style;
@@ -68,6 +87,14 @@ header {
       float: left;
       margin: 0;
       padding: 0;
+
+      &:first-child {
+        display: none;
+
+        @include breakpoint(xxsmall up) {
+          display: block;
+        }
+      }
     }
 
     .util-btn {

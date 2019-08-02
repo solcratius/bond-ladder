@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { Provider } from 'mobx-react';
 
 import Application from './components/Application';
-import { UserAgent, WindowSize } from './components/helper/window';
+import { UserAgent } from './components/helper/window';
 
 import Common from './models/CommonStore';
 import Product from './models/ProductStore';
@@ -20,7 +20,6 @@ const stores = {
 };
 
 UserAgent.set();
-WindowSize.init();
 
 render(
   <Provider appStore={stores}>

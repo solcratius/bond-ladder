@@ -1,9 +1,15 @@
 .intro-module {
   display: block;
   transition: opacity 0.5s ease-in-out;
-  padding: rem-calc(100 0 120);
-  top: calc(50vh - 50px);
-  transform: translateY(-50%);
+  padding: rem-calc(60 0);
+  // top: calc(50vh - 50px);
+  // transform: translateY(-50%);
+
+  @include breakpoint(xmedium up) {
+    padding: rem-calc(100 0 120);
+    top: calc(50vh - 50px);
+    transform: translateY(-50%);
+  }
 }
 
 .short .intro-module {
@@ -16,22 +22,46 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include breakpoint(xmedium up) {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
 
   .intro-title {
     color: $dark-blue;
     flex-grow: 1;
-    vertical-align: middle;
+    padding-bottom: rem-calc(20);
+    padding-right: 0;
+
+    @include breakpoint(xmedium up) {
+      padding-bottom: 0;
+      padding-right: rem-calc(80);
+    }
   }
 
   h2 {
-    font-size: rem-calc(64);
+    font-size: rem-calc(42);
     line-height: 1.2;
-    margin-bottom: rem-calc(60);
+    margin-bottom: rem-calc(40);
     margin-left: rem-calc(-3);
+    max-width: rem-calc(550);
     padding-bottom: rem-calc(30);
     position: relative;
-    white-space: nowrap;
+
+    @include breakpoint(medium up) {
+      font-size: rem-calc(52);
+    }
+
+    @include breakpoint(xmedium up) {
+      margin-bottom: rem-calc(60);
+    }
+
+    @include breakpoint(large up) {
+      font-size: rem-calc(64);
+    }
 
     &:after {
       border-bottom: rem-calc(7) solid $dark-blue;
@@ -55,21 +85,40 @@
   .intro-content {
     background-color: $white;
     border: 1px solid $gray;
-    padding: rem-calc(40 60);
-    min-width: rem-calc(480);
-    vertical-align: middle;
+    padding: rem-calc(20 40);
+    width: 100%;
+
+    @include breakpoint(xxsmall up) {
+      width: 80%;
+    }
+
+    @include breakpoint(xmedium up) {
+      min-width: rem-calc(480);
+      padding: rem-calc(40 60);
+      width: auto;
+    }
 
     input[type='text'],
     input[type='number'] {
-      font-size: rem-calc(28);
+      font-size: rem-calc(22);
       height: auto;
       line-height: 1.1;
       padding: rem-calc(15);
+
+      @include breakpoint(xxmedium up) {
+        font-size: rem-calc(28);
+      }
     }
   }
 
   p {
-    width: 80%;
+    font-size: rem-calc(14);
+    width: 100%;
+
+    @include breakpoint(medium up) {
+      font-size: rem-calc(16);
+      width: 80%;
+    }
 
     @include breakpoint(large up) {
       font-size: rem-calc(18);
@@ -101,7 +150,10 @@
   .rect-btn {
     border-radius: 0;
     float: right;
-    margin-top: rem-calc(30);
-    padding: rem-calc(18 0);
+    margin-top: rem-calc(20);
+
+    @include breakpoint(medium up) {
+      margin-top: rem-calc(30);
+    }
   }
 }

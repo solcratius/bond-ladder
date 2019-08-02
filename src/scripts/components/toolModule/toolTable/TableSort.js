@@ -1,25 +1,15 @@
 import React from 'react';
-import SwitchBox from '../../ui/checkBoxElements/SwitchBox';
 
-const TableSort = props => {
-  const { allocationPercentFormat, onAllocationFormatUpdate } = props;
-
+const TableSort = () => {
   return (
     <div className="row">
-      <div className="column" />
-      <div className="column">Ticker</div>
-      <div className="column">Fund Name</div>
       <div className="column">
-        <div>
-          <div className="sort-text">Allocation</div>
-          <SwitchBox
-            isChecked={allocationPercentFormat}
-            onChange={onAllocationFormatUpdate}
-            textLabel={['$', '%']}
-          />
-        </div>
+        <div className="column-item" />
+        <div className="column-item">Ticker</div>
+        <div className="column-item">Fund Name</div>
+        <div className="column-item">Allocation</div>
       </div>
-      <div className="column">Credit Criteria</div>
+      {/* <div className="column">Credit Criteria</div> */}
       <div className="column">Maturity Year</div>
       <div className="column">Yield to Maturity (%)</div>
       <div className="column">Yield to Worst (%)</div>
